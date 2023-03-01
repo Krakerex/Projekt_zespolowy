@@ -11,11 +11,15 @@
     <body>
         <h1> Obliczanie różniczek </h1>
         <form>
-            <input id="podstawa"></input>
+            
             <input id="stopien"></input>
             <input id="wynik"></input>
         </form>
+
         <form action="#">
+            $$\sqrt[n]{x}$$
+            Podaj x <input type="number" id="podstawa" min="0" max="100" value="80,7">
+            Podaj n <input type="number" id="stopien" min="2" max="10" value="4">
             <button onclick=root()>
                 $$\sqrt[4]{80,7}$$
             </button>

@@ -13,7 +13,7 @@
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
         <h3> Za pomocą różniczki zupełnej oblicz przybliżoną wartość wyrażenia</h3>
@@ -36,11 +36,26 @@
             
         </form>
         <h3> Przykład </h3>
-        <button onclick=przyklad1()>
+        <button onclick = "przyklad1()">
             $\sqrt[4]{80,7}$
         </button>
 
         <h3> Wynik </h3>
+        <script>
+            function przyklad2(){
+                var n = 4;
+                var x = 80.7;
+                var x0 = 0;
+                var deltax = 0;
+                var fun = 0;
+                var poch = 0;
+
+                x0 = Math.round(x);
+                deltax = x0 - x;
+
+                document.getElementById("rozw").innerHTML = "deltax" + deltax;
+            }
+        </script>
         <p id="rozw"></p>
     </body>
 </html>

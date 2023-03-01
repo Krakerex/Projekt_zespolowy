@@ -12,15 +12,16 @@ fx0=root()
 
 function przyklad1(){
 
-    const n = 4;
-    const x = 80.7;
-    const x0 = 0;
-    const deltax = 0;
-    const fun = 0;
-    const poch = 0;
+    var n = 4;
+    var x = 80.7;
+    var x0 = 0;
+    var deltax = 0;
+    var fun = 0;
+    var poch = 0;
 
-    x0 = Math.round(x);
+    x0 = Math.ceil(x);
     deltax = x0 - x;
+    
 
-    const roz = document.getElementById('rozw').innerHTML = deltax;
+    document.getElementById("rozw").innerHTML = x + " " + x0 + " " + deltax;
 }

@@ -1,21 +1,20 @@
 const math = require('mathjs')
 
-function root(x,y)
+function root()
 {
-
-}
-function rootR(x,y){
-    y1=1/y;
-fx=y1*x^(1-y1);
-x0=Math.round(x);
-deltax=x0-x;
-fx0=root()
+    var n = parseFloat(document.Pierw.n.value);
+    var x = parseFloat(document.Pierw.x.value);
+    dlapierw(x, n);
 }
 
 function przyklad1(){
 
     var n = 4;
     var x = 80.7;
+    dlapierw(x, n);
+}
+
+function dlapierw(x, n){
     var x0 = 0;
     var deltax = 0;
     var fun = 0;
@@ -29,5 +28,5 @@ function przyklad1(){
     poch = (1/n) * Math.pow(x0, (n-1/1)*-1);
     wynik = fun + poch * deltax;
     
-    document.getElementById("rozw").innerHTML = "x" +  x + " x0" + x0 + " deltax" + deltax + " fun" + fun + " pochodna:" + poch + " wynik:" + wynik;
+    document.getElementById("rozw").innerHTML = "x: " +  x + "<br> x0: " + x0 + "<br> deltax: " + deltax + "<br> f(x0): " + fun + "<br> pochodna:" + poch + "<br> wynik:" + wynik;
 }

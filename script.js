@@ -1,3 +1,5 @@
+const math = require('mathjs')
+
 function root(x,y)
 {
 
@@ -18,10 +20,14 @@ function przyklad1(){
     var deltax = 0;
     var fun = 0;
     var poch = 0;
+    var wynik = 0;
 
     x0 = Math.ceil(x);
-    deltax = x0 - x;
+    deltax = x - x0;
     
-
-    document.getElementById("rozw").innerHTML = x + " " + x0 + " " + deltax;
+    fun = Math.pow(x0, 1/n);
+    poch = (1/n) * Math.pow(x0, (n-1/1)*-1);
+    wynik = fun + poch * deltax;
+    
+    document.getElementById("rozw").innerHTML = "x" +  x + " x0" + x0 + " deltax" + deltax + " fun" + fun + " pochodna:" + poch + " wynik:" + wynik;
 }

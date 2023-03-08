@@ -6,6 +6,9 @@ function root()
 {
     var n = parseFloat(document.Pierw.n.value);
     var x = parseFloat(document.Pierw.x.value);
+    if(n == 0 || n == 1){
+        n = 2;
+    }
     dlapierw(x, n);
 }
 

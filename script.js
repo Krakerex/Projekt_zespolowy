@@ -29,15 +29,67 @@ function dlapierw(x, n){
     x0 = Math.ceil(x);
     deltax = x - x0;
     
-    if(deltax == 0){
-        wynik = Math.pow(x, 1/n);
-        document.getElementById("rozw").innerHTML = "x: " +  x + "<br> wynik:" + wynik;
-    }else{
+    //if(deltax == 0){
+       // wynik = Math.pow(x, 1/n);
+        //document.getElementById("rozw").innerHTML = "x: " +  x + "<br> wynik:" + wynik;
+    //}else{
         fun = Math.pow(x0, 1/n);
-        poch = (1/n) * Math.pow(x0, (n-1/1)*-1);
-        wynik = fun + poch * deltax;
+        poch = 1 / (n * Math.pow(x0, (n-1)/n));
+        wynik = fun + (poch * deltax);
+    
+        document.getElementById("rozw").innerHTML = "x: " +  x + "<br> x0: " + x0 + "<br> deltax: " + deltax + "<br> f(x0): " + fun + "<br> pochodna: " + poch + "<br> wynik: " + wynik;
+    //}
+
+}
+function przyklad2(){
+    var n = 3;
+    var x = 0.977;
+    dlapoteg(x, n);
+}
+
+function dlapoteg(x, n){
+    var x0 = 0;
+    var deltax = 0;
+    var fun = 0;
+    var poch = 0;
+    var wynik = 0;
+
+    x0 = Math.ceil(x);
+    deltax = x - x0;
+    
+    // if(deltax == 0){
+    //     wynik = Math.pow(x, n);
+    //     document.getElementById("rozw").innerHTML = "x: " +  x + "<br> wynik:" + wynik;
+    // }else{
+        fun = Math.pow(x0, n);
+        poch = n * Math.pow(x0, (n-1));
+        wynik = fun + (poch * deltax);
     
         document.getElementById("rozw").innerHTML = "x: " +  x + "<br> x0: " + x0 + "<br> deltax: " + deltax + "<br> f(x0): " + fun + "<br> pochodna:" + poch + "<br> wynik:" + wynik;
-    }
+    //}
+}
+function przyklad3() {
+    var x = 1.0007;
+    dlaln(x);
+}
+function dlaln(x){
+    var x0 = 0;
+    var deltax = 0;
+    var fun = 0;
+    var poch = 0;
+    var wynik = 0;
 
+    x0 = Math.ceil(x);
+    deltax = x - x0;
+
+    // if(deltax == 0){
+    //     wynik = Math.log(x);
+    //     document.getElementById("rozw").innerHTML = "x: " +  x + "<br> wynik:" + wynik;
+    // }else{
+        fun = Math.log(x0);
+        poch = 1/x0;
+        wynik = fun + (poch * deltax);
+    
+        document.getElementById("rozw").innerHTML = "x: " +  x + "<br> x0: " + x0 + "<br> deltax: " + deltax + "<br> f(x0): " + fun + "<br> pochodna:" + poch + "<br> wynik:" + wynik;
+    //}
 }

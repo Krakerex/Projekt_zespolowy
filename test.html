@@ -20,13 +20,14 @@
         <form action="#" name="Pierw">
             <p>Podstaw wartości do wzoru $\sqrt[n]{x}$</p>
             <label for="x">
-                Podaj x (część ułamkową podaj po znaku ".")
+                Podaj x (część ułamkową podaj po znaku "." lub ",")
             </label>
             <input type="number" id="x" min="2" max="100" value="7.88" name = "x">
             <label for="n">
                 Podaj n 
             </label>
             <input type="number" id="n" min="2" max="10" value="3" name = "n">
+            <br>
             <button onclick=root()>
                 Oblicz
             </button>
@@ -38,6 +39,14 @@
         <h3> Przykład </h3>
         <button onclick = przyklad1()>
             $\sqrt[4]{80,7}$
+        </button>
+        <br><br>
+        <button onclick = przyklad2()>
+            $(0,977)^3$
+        </button>
+        <br><br>
+        <button onclick = przyklad3()>
+            $ln(1,0007)$
         </button>
 
         <h3> Wynik </h3>

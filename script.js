@@ -1,4 +1,6 @@
-const math = require('mathjs')
+//const math = require('mathjs')
+
+
 
 function root()
 {
@@ -24,9 +26,15 @@ function dlapierw(x, n){
     x0 = Math.ceil(x);
     deltax = x - x0;
     
-    fun = Math.pow(x0, 1/n);
-    poch = (1/n) * Math.pow(x0, (n-1/1)*-1);
-    wynik = fun + poch * deltax;
+    if(deltax == 0){
+        wynik = Math.pow(x, 1/n);
+        document.getElementById("rozw").innerHTML = "x: " +  x + "<br> wynik:" + wynik;
+    }else{
+        fun = Math.pow(x0, 1/n);
+        poch = (1/n) * Math.pow(x0, (n-1/1)*-1);
+        wynik = fun + poch * deltax;
     
-    document.getElementById("rozw").innerHTML = "x: " +  x + "<br> x0: " + x0 + "<br> deltax: " + deltax + "<br> f(x0): " + fun + "<br> pochodna:" + poch + "<br> wynik:" + wynik;
+        document.getElementById("rozw").innerHTML = "x: " +  x + "<br> x0: " + x0 + "<br> deltax: " + deltax + "<br> f(x0): " + fun + "<br> pochodna:" + poch + "<br> wynik:" + wynik;
+    }
+
 }

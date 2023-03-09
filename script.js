@@ -1,3 +1,4 @@
+
 function root()
 {
     var n = parseFloat(document.Pierw.n.value);
@@ -157,4 +158,23 @@ function dlapierwul(x, n){
     wynik = fun + (poch * deltax);
     
     document.getElementById("rozw").innerHTML = "x: " +  x + "<br> x0: " + x0 + "<br> deltax: " + deltax + "<br> f(x0): " + fun + "<br> pochodna: " + poch + "<br> wynik: " + wynik;
+}
+
+function wypuklosc(drugaPochodna,a,b){
+    const wartoscPunktu=[];
+    const pochodna=drugaPochodna;
+    for(i=a;i<b;i++){
+        x=math.derivative(wyrazenie, 'x');
+        x=math.derivative(x, 'x').evaluate({x: i});
+        wartoscPunktu.push(x);
+    }
+    wartoscPunktu.forEach((element, index) => {
+        document.getElementById("rozw").innerHTML += "x: "+index+" = "+   element + "<br>"; 
+    });
+    
+
+}
+function przyklad8(){
+    wyrazenie='(x-2)^3/(x+1)^2';
+    wypuklosc(wyrazenie,0,10);
 }

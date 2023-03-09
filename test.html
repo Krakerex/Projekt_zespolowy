@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <title> test </title>
+        <title> Różniczka </title>
         <script>
             MathJax = {
               tex: {
@@ -20,13 +20,14 @@
         <form action="#" name="Pierw">
             <p>Podstaw wartości do wzoru $\sqrt[n]{x}$</p>
             <label for="x">
-                Podaj x (część ułamkową podaj po znaku ".")
+                Podaj x (część ułamkową podaj po znaku "." lub ",")
             </label>
             <input type="number" id="x" min="2" max="100" value="7.88" name = "x">
             <label for="n">
                 Podaj n 
             </label>
             <input type="number" id="n" min="2" max="10" value="3" name = "n">
+            <br>
             <button onclick=root()>
                 Oblicz
             </button>
@@ -36,27 +37,36 @@
             
         </form>
         <h3> Przykład </h3>
-        <button onclick = "przyklad1()">
+        <button onclick = przyklad1()>
             $\sqrt[4]{80,7}$
+        </button>
+        <br><br>
+        <button onclick = przyklad2()>
+            $(0,977)^3$
+        </button>
+        <br><br>
+        <button onclick = przyklad3()>
+            $ln(1,0007)$
+        </button>
+        <br><br>
+        <button onclick = przyklad4()>
+            $arctg(0,007)$
+        </button>
+        <br><br>
+        <button onclick = przyklad5()>
+            $arcsin(-0,05)$
+        </button>
+        <br><br>
+        <button onclick = przyklad6()>
+            $\dfrac{1}{\cos\left(x\right)}$
+        </button>
+        <br><br>
+        <button onclick = przyklad7()>
+            $\dfrac{1}{\sqrt[4]{15,996}}$
         </button>
 
         <h3> Wynik </h3>
-        <script>
-            function przyklad2(){
-                var n = 4;
-                var x = 80.7;
-                var x0 = 0;
-                var deltax = 0;
-                var fun = 0;
-                var poch = 0;
-
-                x0 = Math.round(x);
-                deltax = x0 - x;
-
-                document.getElementById("rozw").innerHTML = "deltax" + deltax;
-            }
-            
-        </script>
+        
         <p id="rozw"></p>
     </body>
 </html>

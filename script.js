@@ -1,4 +1,3 @@
-
 function root()
 {
     var n = parseFloat(document.Pierw.n.value);
@@ -163,18 +162,51 @@ function dlapierwul(x, n){
 function wypuklosc(drugaPochodna,a,b){
     const wartoscPunktu=[];
     const pochodna=drugaPochodna;
-    for(i=a;i<b;i++){
+    for(i=a;i<=b;i+=1){
         x=math.derivative(wyrazenie, 'x');
         x=math.derivative(x, 'x').evaluate({x: i});
-        wartoscPunktu.push(x);
+        var punkt =[i,x];
+        wartoscPunktu.push(punkt);
     }
-    wartoscPunktu.forEach((element, index) => {
-        document.getElementById("rozw").innerHTML += "x: "+index+" = "+   element + "<br>"; 
+    document.getElementById("rozw").innerHTML='';
+    wartoscPunktu.forEach((punkt, index) => {
+        document.getElementById("rozw").innerHTML += "x: "+   punkt[0] +" = "+punkt[1]+ "<br>"; 
     });
+    const punktZmiany=[];
+    var sign;
+    if(wartoscPunktu[0][1]<=0){
+         sign=-1
+    }
+    else{
+         sign=1  
+    }
     
+    wartoscPunktu.forEach(punkt => {
+        if(punkt[1]<0 && sign==-1){
+            
+        }
+        else if(punkt[1]==0 && sign==-1){
+            punktZmiany.push(punkt);
+            sign=1;
+        }
+        else if(punkt[1]<0 && sign==1){
+            punktZmiany.push(punkt);
+            sign=-1
+        }else if(punkt[1]>0 && sign==-1){
+            punktZmiany.push(punkt);
+            sign=1
+        }
+        else if(punkt[1]>0 && sign==1){
+           
+        }
+})
+punktZmiany.forEach(punkt => {
+    document.getElementById("rozw").innerHTML += "x1: "+   punkt[0] +" = "+punkt[1]+ "<br>"; 
+});
 
 }
 function przyklad8(){
-    wyrazenie='(x-2)^3/(x+1)^2';
-    wypuklosc(wyrazenie,0,10);
+    wyrazenie='9*((x^5)^(1/3))*(e^(-2x))';
+    wartosciPodwójnychPochodnych=wypuklosc(wyrazenie,-20,20)
+    
 }

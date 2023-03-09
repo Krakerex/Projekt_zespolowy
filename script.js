@@ -36,6 +36,9 @@ function cosul(){
 function pierwul(){
     var x = parseFloat(document.PierwUl.x.value);
     var n = parseFloat(document.PierwUl.n.value);
+    if(n <= 2){
+        n = 2;
+    }
     dlapierwul(x,n);
 }
 

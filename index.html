@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title> Różniczka </title>
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+        
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <h3> Za pomocą różniczki zupełnej oblicz przybliżoną wartość wyrażenia</h3>
+        <hr>
+        <form action="#" name="Pierw">
+            <p>Podstaw wartości do wzoru $\sqrt[n]{x}$</p>
+            <label for="x">
+                Podaj x (część ułamkową podaj po znaku "." lub ",")
+            </label>
+            <input type="number" id="x" name = "x">
+            <label for="n">
+                Podaj n 
+            </label>
+            <input type="number" id="n" name = "n">
+            <br>
+            <button onclick=pierw()>
+                Oblicz
+            </button>
+        </form>
+        <hr>
+        <form action="#" name="Potega">
+            <p>Podstaw wartości do wzoru $(x)^n$</p>
+            <label for = "x">
+                Podaj x (część ułamkową podaj po znaku "." lub ",")
+            </label>
+            <input type="number" id="x" name = "x">
+            <label for="n">
+                Podaj n 
+            </label>
+            <input type="number" id="n" name = "n">
+            <br>
+            <button onclick=potenga()>
+                Oblicz
+            </button>
+        </form>
+        <hr>
+        <form action="#" name="LogN">
+            <p>Podstaw wartości do wzoru $ln(x)$</p>
+            <label for = "x">
+                Podaj x (część ułamkową podaj po znaku "." lub ",")
+            </label>
+            <input type="number" id="x" name = "x">
+            <br>
+            <button onclick=logn()>
+                Oblicz
+            </button>
+        </form>
+        <hr>
+        <form action="#" name="Arctg">
+            <p>Podstaw wartości do wzoru $arctg(x)$</p>
+            <label for = "x">
+                Podaj x (część ułamkową podaj po znaku "." lub ",")
+            </label>
+            <input type="number" id="x" name = "x">
+            <br>
+            <button onclick=atan()>
+                Oblicz
+            </button>
+        </form>
+        <hr>
+        <form action="#" name="Arcsin">
+            <p>Podstaw wartości do wzoru $arcsin(x)$</p>
+            <label for = "x">
+                Podaj x (część ułamkową podaj po znaku "." lub ",")
+            </label>
+            <input type="number" id="x" name = "x">
+            <br>
+            <button onclick=asin()>
+                Oblicz
+            </button>
+        </form>
+        <hr>
+        <form action="#" name="CosUl">
+            <p>Podstaw wartości do wzoru $\dfrac{1}{\cos\left(x\right)}$</p>
+            <label for = "x">
+                Podaj x (część ułamkową podaj po znaku "." lub ",")
+            </label>
+            <input type="number" id="x" name = "x">
+            <br>
+            <button onclick=cosul()>
+                Oblicz
+            </button>
+        </form>
+        <hr>
+        <form action="#" name="PierwUl">
+            <p>Podstaw wartości do wzoru $\dfrac{1}{\sqrt[n]{x}}$</p>
+            <label for = "x">
+                Podaj x (część ułamkową podaj po znaku "." lub ",")
+            </label>
+            <input type="number" id="x" name = "x">
+            <label for="n">
+                Podaj n 
+            </label>
+            <input type="number" id="n" name = "n">
+            <br>
+            <button onclick=pierwul()>
+                Oblicz
+            </button>
+        </form>
+        <hr>
+
+        <h3> Przykłady: </h3>
+        <button onclick = przyklad1()>
+            $\sqrt[4]{80,7}$
+        </button>
+        <br><br>
+        <button onclick = przyklad2()>
+            $(0,977)^3$
+        </button>
+        <br><br>
+        <button onclick = przyklad3()>
+            $ln(1,0007)$
+        </button>
+        <br><br>
+        <button onclick = przyklad4()>
+            $arctg(0,007)$
+        </button>
+        <br><br>
+        <button onclick = przyklad5()>
+            $arcsin(-0,05)$
+        </button>
+        <br><br>
+        <button onclick = przyklad6()>
+            $\dfrac{1}{\cos\left(0.03\right)}$
+        </button>
+        <br><br>
+        <button onclick = przyklad7()>
+            $\dfrac{1}{\sqrt[4]{15,996}}$
+        </button>
+        <br><br>
+        <button onclick = przyklad8()>
+            $3x^2$
+        </button>
+
+        <h3> Wynik </h3>
+        
+        <p id="rozw"></p>
+    </body>
+</html>

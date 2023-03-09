@@ -240,7 +240,7 @@ punktZmiany.forEach(punkt => {
 
 }
 function przyklad8(){
-    wyrazenie='9*((x^5)^(1/3))*(e^(-2x))';
+    wyrazenie='9*((x^5)^(1/3))*(e^(-2x))+2';
     wartosciPodwójnychPochodnych=wypuklosc(wyrazenie,-20,20)
     
 }

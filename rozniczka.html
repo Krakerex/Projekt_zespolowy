@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Różniczka</title>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$']]
+          }
+        };
+    </script>
+    <style>
+        body {
+        font-family: 'Georgia';
+        }
+    </style>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+    <script type="text/javascript" src="rozniczka.js"></script>
+</head>
+<body>
+    <h2> Za pomocą różniczki zupełnej oblicz przybliżoną wartość wyrażenia</h3>
+    <h3> Wybierz wzór</h3>
+    <button onclick=f1()>$\sqrt[n]{x}$</button>
+    <button onclick=f2()>$(x)^n$</button>
+    <button onclick=f3()>$ln(x)$</button>
+    <button onclick=f4()>$arctan(x)$</button>
+    <button onclick=f5()>$arcsin(x)$</button>
+    <button onclick=f6()>$\mathrm{e}^x$</button>
+    <button onclick=f7()>$\dfrac{1}{\cos(x)}$</button>
+    <button onclick=f8()>$\dfrac{1}{\sqrt[n]{x}}$</button>
+    <br><br><br>
+    <div id = "foremki"></div>
+    <p id="rozw"></p>
+</body>
+</html>

@@ -141,6 +141,7 @@ function asin(){
 }
 function ex(){
     var x = document.getElementById("x").value;
+    dlaex(x);
 }
 function cosul(){
     var x = document.getElementById("x").value;
@@ -196,9 +197,9 @@ function dlapoteg(x, n){
             + "$f'(x) = n*x^{n-1}$<br>"
             + "$x_0 = " + x0 + "$<br>"
             + "$\\Delta x = " + deltax + "$ <br>"
-            + "$f(x_0) = f(" + x0 + ") = (" + x0 + ")^" + n + " = " + fun + "$<br>"
+            + "$f(x_0) = f(" + x0 + ") = (" + x0 + ")^{" + n + "} = " + fun + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = " + n + "*(" + x0 + ")^{" + (n - 1) + "} = " + poch + "$<br>"
-            + "$(" + x + ")^" + n + " \\approx " + fun + " + " + poch + " * (" + deltax + ") \\approx " + wynik + "$<br>";
+            + "$(" + x + ")^{" + n + "} \\approx " + fun + " + " + poch + " * (" + deltax + ") \\approx " + wynik + "$<br>";
     drukowanie(odp);
 }
 function dlaln(x){
@@ -268,6 +269,29 @@ function dlaasin(x){
             + "$f(x_0) = f(" + x0 + ") = \\arcsin(" + x0 + ") = " + fun + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = \\dfrac{1}{\\sqrt{1-"+ x0 + "^2}} = " + poch + "$<br>"
             + "$\\arcsin(" + x + ") \\approx " + fun + " + " + poch + " * (" + deltax + ") \\approx " + wynik + "$<br>";
+    drukowanie(odp);
+}
+function dlaex(x){
+    var x0 = 0;
+    var deltax = 0;
+    var fun = 0;
+    var poch = 0;
+    var wynik = 0;
+
+    x0 = Math.round(x);
+    deltax = x - x0;
+
+    fun = Math.exp(x0);
+    poch = Math.exp(x0);
+    wynik = fun + (poch * deltax);
+
+    var odp = "$f(x) = {e}^x$<br>"
+            + "$f'(x) = {e}^x$<br>"
+            + "$x_0 = " + x0 + "$<br>"
+            + "$\\Delta x = " + deltax + "$ <br>"
+            + "$f(x_0) = f(" + x0 + ") = {e}^" + x0 + " = " + fun + "$<br>"
+            + "$f'(x_0) = f'(" + x0 + ") = {e}^" + x0 + " = " + poch + "$<br>"
+            + "${e}^{" + x + "} \\approx " + fun + " + " + poch + " * (" + deltax + ") \\approx " + wynik + "$<br>";
     drukowanie(odp);
 }
 function dlacoswul(x){

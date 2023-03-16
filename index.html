@@ -13,7 +13,7 @@
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
-        
+        <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="script.js"></script>
     </head>
@@ -116,6 +116,22 @@
             </button>
         </form>
         <hr>
+        <form action="#" name="wypuklosc">
+            <p>Wypuklosc Funkcji </p>
+            <label for = "fx">
+                Przykladowy format funkcji ( x^2*(2-math.log(x)) )
+            </label>
+            <input type="text" id="fx" name = "fx">
+            <label for = "zakres">
+                 zakres
+            </label>
+            <input type="number" id="zakres" name = "zakres" default=20>
+            <br>
+            <button onclick=przyklad8() type="button">
+                Oblicz
+            </button>
+        </form>
+        <hr>
 
         <h3> Przykłady: </h3>
         <button onclick = przyklad1()>
@@ -147,11 +163,16 @@
         </button>
         <br><br>
         <button onclick = przyklad8()>
-            $3x^2$
+            $x^2(2-ln(x))$
         </button>
 
         <h3> Wynik </h3>
         
         <p id="rozw"></p>
+        <p id="wykres"></p>
+        <div id="stopka">
+            <p>Autorzy:</p>
+            <p>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</p>
+        </div>
     </body>
 </html>

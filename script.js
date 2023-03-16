@@ -1,11 +1,45 @@
-function root()
-{
+function pierw(){
     var n = parseFloat(document.Pierw.n.value);
     var x = parseFloat(document.Pierw.x.value);
-    if(n == 0 || n == 1){
+    if(n <= 2){
         n = 2;
     }
     dlapierw(x, n);
+}
+
+function potenga(){
+    var x = parseFloat(document.Potega.x.value);
+    var n = parseFloat(document.Potega.n.value);
+    dlapoteg(x, n);
+}
+
+function logn(){
+    var x = parseFloat(document.LogN.x.value);
+    dlaln(x);
+}
+
+function atan(){
+    var x = parseFloat(document.Arctg.x.value);
+    dlaatan(x);
+}
+
+function asin(){
+    var x = parseFloat(document.Arcsin.x.value);
+    dlaasin(x);
+}
+
+function cosul(){
+    var x = parseFloat(document.CosUl.x.value);
+    dlacoswul(x);
+}
+
+function pierwul(){
+    var x = parseFloat(document.PierwUl.x.value);
+    var n = parseFloat(document.PierwUl.n.value);
+    if(n <= 2){
+        n = 2;
+    }
+    dlapierwul(x,n);
 }
 
 function przyklad1(){

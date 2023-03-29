@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title> Monotoniczność </title>
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+        <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="monotonicznosc.js"></script>
+    </head>
+    <body>
+        <h3>Zbadaj monotoniczność ciągu o wyrazie ogólnym:</h3>
+        <button onclick = isMonotonic(przyklad1)>
+            $\ a_n = \frac{3^n}{(n+3)!}$
+        </button>
+        <br><br>
+        <button onclick = isMonotonic(przyklad2)>
+            $\ c_n = \frac{3n+1}{n+3}$
+        </button>
+        <br><br>
+        <button onclick = isMonotonic(przyklad3)>
+            $\ a_n = \frac{3^n}{(3n)!}$
+        </button>
+        
+        <p id="rozw"></p>
+
+        <div id="stopka">
+            <p>Autorzy:</p>
+            <p>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</p>
+        </div>
+    </body>
+</html>

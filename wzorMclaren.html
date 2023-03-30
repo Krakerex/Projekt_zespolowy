@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wypukłość</title>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$']]
+          }
+        };
+    </script>
+    <style>
+        body {
+        font-family: 'Georgia';
+        }
+    </style>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+    <script type="text/javascript" src="wzorMclaren.js"></script>
+</head>
+<body>
+
+    <h1>Wzor Mclarena </h1>
+    
+    <br>
+    <label for = "liczba">
+        Wybierz liczbe do znalezienia funkcji:
+    </label>
+    <br>
+    <button onclick=ff1()>$e^(2x)$</button>
+   
+    <div id = "foremki"></div>
+    <p id="rozw"></p>
+    <a href="index.html">Powrót</a>
+    <div id="stopka">
+        <h2>Autorzy:</h2>
+        <h3>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</h3>
+    </div>

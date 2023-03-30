@@ -1,15 +1,32 @@
+var mnr = require('modified-newton-raphson');
+var mathjs= require('mathjs')
+function wypuklosc(){
+  wyrazenie=document.getElementById("fx").value;
+  problem='9*((x^5)^(1/3))*(e^(-2x))+2';
+  zakres=document.getElementById("zakres").value;
+  pochodna_pierwszego_stopnia=pochodna(wyrazenie)
+  pochodna_drugiego_stopnia=drugaPochodna(wyrazenie)
+  drukuj(wyrazenie,pochodna_pierwszego_stopnia,pochodna_drugiego_stopnia)
+  wartoscPunktu=wypukloscLicz(wyrazenie,-zakres,zakres);
+  draw(zakres,wartoscPunktu,0.1)
+}
+function pochodna(wyrazenie){
+  return math.derivative(wyrazenie, 'x');
+}
+function drugaPochodna(wyrazenie){
+  return math.derivative(math.derivative(wyrazenie, 'x'), 'x');
+}
 function wypukloscLicz(wyrazenie,a,b){
     document.getElementById("rozw").innerHTML='';
     const wartoscPunktu=[];
     const wartoscY=[];
-    const pochodna=math.derivative(wyrazenie, 'x');
-    const drugaPochodna=math.derivative(pochodna, 'x');
+    pochodna_drugiego_stopnia=drugaPochodna(wyrazenie)
     document.getElementById("rozw").innerHTML+=
-    "$f'(x)= "+pochodna+"$<br>"+"$f''(x)= "+drugaPochodna+"$<br>";
+    "$f''(x)= "+pochodna_drugiego_stopnia+"$<br>";
     MathJax.typeset();
     for(i=a;i<=b;i+=0.1){
         x=math.derivative(wyrazenie, 'x');
-        x=math.derivative(x, 'x').evaluate({x: i});
+        x=pochodna_drugiego_stopnia.evaluate({x: i});
         var punkt =[i,x];
         wartoscY.push(x);
         wartoscPunktu.push(punkt);
@@ -57,15 +74,9 @@ punktZmiany.forEach(punkt => {
 });
 return wartoscY;
 }
-function wypuklosc(){
-    wyrazenie=document.getElementById("fx").value;
-    problem='9*((x^5)^(1/3))*(e^(-2x))+2';
-    zakres=document.getElementById("zakres").value;
-    wartoscPunktu=wypukloscLicz(wyrazenie,-zakres,zakres);
-    draw(zakres,wartoscPunktu)
-}
-function draw(zakres,y){
-    const xValues = math.range(-zakres, zakres, 0.1).toArray()
+
+function draw(zakres,y,krok){
+    const xValues = math.range(-zakres, zakres, krok).toArray()
       const yValues = y
 
       // render the plot using plotly
@@ -98,4 +109,14 @@ function draw(zakres,y){
     }
       const data = [trace1]
       Plotly.newPlot('wykres', data,layout)
+      document.getElementById("rozw").innerHTML+="zero: "+mnr(wyrazenie,fp,fpp,2)
     }
+    function f   (x) { return eval(wyrazenie) }
+    function fp   (x) { return pochodna_pierwszego_stopnia }
+    function fpp   (x) { return pochodna_drugiego_stopnia }
+    function drukuj(wyrazenie,pochodna_pierwszego_stopnia,pochodna_drugiego_stopnia){
+      
+      
+    }
+    exports.wypuklosc = wypuklosc;
+

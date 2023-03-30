@@ -1,5 +1,13 @@
 {
   "dependencies": {
-    "mathjs": "^11.6.0"
+    "mathjs": "^11.7.0",
+    "modified-newton-raphson": "^1.0.2",
+    "newton-raphson": "^0.0.3",
+    "newton-raphson-method": "^1.0.2",
+    "readline": "^1.3.0",
+    "readline-browserify": "^0.0.4",
+    "root-finding": "^1.0.2",
+    "tsify": "^5.0.4",
+    "typescript": "^5.0.2"
   }
 }

@@ -1,12 +1,9 @@
-var mnr = require('modified-newton-raphson');
-var mathjs= require('mathjs')
 function wypuklosc(){
   wyrazenie=document.getElementById("fx").value;
   problem='9*((x^5)^(1/3))*(e^(-2x))+2';
   zakres=document.getElementById("zakres").value;
   pochodna_pierwszego_stopnia=pochodna(wyrazenie)
   pochodna_drugiego_stopnia=drugaPochodna(wyrazenie)
-  drukuj(wyrazenie,pochodna_pierwszego_stopnia,pochodna_drugiego_stopnia)
   wartoscPunktu=wypukloscLicz(wyrazenie,-zakres,zakres);
   draw(zakres,wartoscPunktu,0.1)
 }
@@ -109,14 +106,7 @@ function draw(zakres,y,krok){
     }
       const data = [trace1]
       Plotly.newPlot('wykres', data,layout)
-      document.getElementById("rozw").innerHTML+="zero: "+mnr(wyrazenie,fp,fpp,2)
+
     }
-    function f   (x) { return eval(wyrazenie) }
-    function fp   (x) { return pochodna_pierwszego_stopnia }
-    function fpp   (x) { return pochodna_drugiego_stopnia }
-    function drukuj(wyrazenie,pochodna_pierwszego_stopnia,pochodna_drugiego_stopnia){
-      
-      
-    }
-    exports.wypuklosc = wypuklosc;
+
 

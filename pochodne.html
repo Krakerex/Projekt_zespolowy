@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pochodne</title>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$']]
+          }
+        };
+    </script>
+    <style>
+        body {
+        font-family: 'Georgia';
+        }
+    </style>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+    <script type="text/javascript" src="pochodne.js"></script>
+</head>
+<body>
+    <h2> Wyprowadź wzór na pochodną funkcji</h3>
+    <h3> Wybierz wzór</h3>
+    <button onclick=f1()>$arccos(x)$</button>
+    <button onclick=f2()>$cos(3x)$</button>
+    <button onclick=f3()>$\dfrac{1}{cos(x)}$</button>
+    <button onclick=f4()>$\dfrac{1}{sin(5x)}$</button>
+    <p id="rozw"></p>
+    <a href="index.html">Powrót</a>
+    <div id="stopka">
+        <h2>Autorzy:</h2>
+        <h3>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</h3>
+    </div>
+</body>
+</html>

@@ -1,12 +1,15 @@
-function wypuklosc(){
-  wyrazenie=document.getElementById("fx").value;
+function wypuklosc(wyrazenie){
+  if (wyrazenie==null){
+    wyrazenie=document.getElementById("fx").value;
+  }
+  
   problem='9*((x^5)^(1/3))*(e^(-2x))+2';
   zakres=document.getElementById("zakres").value;
   pochodna_pierwszego_stopnia=pochodna(wyrazenie)
   pochodna_drugiego_stopnia=drugaPochodna(wyrazenie)
-  wartoscPunktu=wypukloscLicz(wyrazenie,pochodna_pierwszego_stopnia,pochodna_drugiego_stopnia,-zakres,zakres);
- let x1 = 0, x2 = 1, E = 0.0001;
-  secant(x1, x2, E);
+  wartoscPunktu=wypukloscLicz(wyrazenie,pochodna_drugiego_stopnia,-zakres,zakres);
+  punktyPrzegięcia=findInflectionPoints(pochodna_drugiego_stopnia,-zakres,zakres,0.0001)
+  document.getElementById("rozw").innerHTML+="Punkty przegięcia: " +punktyPrzegięcia;
   draw(zakres,wartoscPunktu,0.1)
 }
 function pochodna(wyrazenie){
@@ -15,7 +18,7 @@ function pochodna(wyrazenie){
 function drugaPochodna(wyrazenie){
   return math.derivative(math.derivative(wyrazenie, 'x'), 'x');
 }
-function wypukloscLicz(wyrazenie,pochodna_pierwszego_stopnia,pochodna_drugiego_stopnia,a,b){
+function wypukloscLicz(wyrazenie,pochodna_drugiego_stopnia,a,b){
     document.getElementById("rozw").innerHTML='';
     const wartoscPunktu=[];
     const wartoscY=[];
@@ -66,10 +69,6 @@ function wypukloscLicz(wyrazenie,pochodna_pierwszego_stopnia,pochodna_drugiego_s
         poprzedniPunkt=punkt;
         
 })
-document.getElementById("rozw").innerHTML+="Punkty przegięcia (w trakcie)"+"<br>"
-punktZmiany.forEach(punkt => {
-    document.getElementById("rozw").innerHTML += "x1: "+  math.round(punkt[0],3)  +" = "+math.round(punkt[1],3) + "<br>"; 
-});
 return wartoscY;
 }
 
@@ -109,44 +108,63 @@ function draw(zakres,y,krok){
       Plotly.newPlot('wykres', data,layout)
 
     }
-    function secant(wyrazenie,x1, x2, E){
-
- 
-    // An example function whose solution is determined using
-    // Bisection Method. The function is x^3 - x^2  + 2
-    function f(x)
-    {
-      let f = Math.pow(x, 3) + x - 1;
-      return f;
+    
+  function findInflectionPoints(fSecondDerivative, a, b, dx) {
+    const df2 =fSecondDerivative; // Skompiluj wyrażenie matematyczne dla drugiej pochodnej funkcji
+  
+    const inflectionPoints = [];
+  
+    for (let x = a + dx; x < b; x += dx) {
+      const f1 = df2.evaluate({ x: x - dx });
+      const f2 = df2.evaluate({ x: x });
+      const f3 = df2.evaluate({ x: x + dx });
+  
+      if (f1 < 0 && f2 > 0 && f3 > 0) {
+        inflectionPoints.push(x);
+      } else if (f1 > 0 && f2 < 0 && f3 < 0) {
+        inflectionPoints.push(x);
+      }
     }
-    // Prints root of func(x) with error of EPSILON
-    let n = 0, xm, x0, c;
-    if (f(x1) * f(x2) < 0) {
-        do {
-            // calculate the intermediate value
-            x0 = (x1 * f(x2) - x2 * f(x1)) / (f(x2) - f(x1));
- 
-            // check if x0 is root of equation or not
-            c = f(x1) * f(x0);
- 
-            // update the value of interval
-            x1 = x2;
-            x2 = x0;
- 
-            // update number of iteration
-            n++;
- 
-            // if x0 is the root of equation then break the loop
-            if (c == 0)
-                break;
-            xm = (x1 * f(x2) - x2 * f(x1)) / (f(x2) - f(x1));
-        } while (Math.abs(xm - x0) >= E); // repeat the loop
-                                // until the convergence
-     
-            
-        } else
-    
-        document.getElementById("rozw").innerHTML+="Root of the given equation=" + x0 + "<br>";
-    
+  
+    return inflectionPoints;
   }
-
+  function znajdzPrzedzialyWypuklosciIWkleslosci(punktyZwrotne) {
+    const przedzialy = [];
+  
+    for (let i = 1; i < punktyZwrotne.length; i++) {
+      const przedzial = {
+        punktStartowy: punktyZwrotne[i - 1],
+        punktKoncowy: punktyZwrotne[i]
+      };
+  
+      if (i % 2 === 1) {
+        przedzial.typ = "wypukły";
+      } else {
+        przedzial.typ = "wklęsły";
+      }
+  
+      przedzialy.push(przedzial);
+    }
+  
+    if (przedzialy.length === 0) {
+      return "Funkcja jest monotoniczna";
+    }
+  
+    let tekst = "Przedziały ";
+  
+    for (let i = 0; i < przedzialy.length; i++) {
+      const przedzial = przedzialy[i];
+      const tekstPrzedzialu = `${przedzial.punktStartowy} - ${przedzial.punktKoncowy} (${przedzial.typ})`;
+  
+      if (i === przedzialy.length - 1) {
+        tekst += `i ${tekstPrzedzialu}`;
+      } else if (i === przedzialy.length - 2) {
+        tekst += `${tekstPrzedzialu} `;
+      } else {
+        tekst += `${tekstPrzedzialu}, `;
+      }
+    }
+  
+    return tekst;
+  }
+ 

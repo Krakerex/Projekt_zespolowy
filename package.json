@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "durand-kerner": "^1.0.0",
     "mathjs": "^11.7.0",
     "modified-newton-raphson": "^1.0.2",
     "newton-raphson": "^0.0.3",

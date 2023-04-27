@@ -1,32 +1,20 @@
-function druk(poch){
-    document.getElementById("rozw").innerHTML = "$ f'(x) = " + poch + "$";
+function derivative(expression, variable) {
+    const expr = math.parse(expression);
+    const derivative = math.derivative(expr, variable);
+    return derivative.toString();
+  }
+  
+  function calculateDerivative() {
+    const expression = document.getElementById('expression').value;
+    const variable = "x";
+    const result = derivative(expression, variable);
+    const ex = math.parse(expression).toTex();
+    const res = math.parse(result).toTex(); 
+    const odp = "$$ f\\left(x \\right) = " + ex + "$$"
+                + "$$ f' \\left(x \\right) = f' \\left(" + ex + "\\right) = " +  res + "$$";
+    document.getElementById('rozw').textContent = odp;
     MathJax.typeset();
-}
-function f1(){
-    const wyr = "acos(x)";
-    const poch = math.derivative(wyr, 'x');
-    druk(poch);
-}
-function f2(){
-    const wyr = "cos(3x)";
-    const poch = math.derivative(wyr, 'x');
-    druk(poch);
-}
-function f3(){
-    const wyr = "1 / cos(x)";
-    const poch = math.derivative(wyr, 'x');
-    druk(poch);
-}
-function f4(){
-    const wyr = "1 / sin(5x)";
-    const poch = math.derivative(wyr, 'x');
-    druk(poch);
-}
-function formP(){
-    const wzor = document.getElementById("wzor").value;
-    const poch = math.derivative(wzor, 'x');
-    druk(poch);
-}
+  }
 function test(){
     const test = `
         <h4>Wybrany wzór: $\\dfrac{1}{x^n}$ </h4>

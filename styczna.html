@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wypukłość</title>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$']]
+          }
+        };
+    </script>
+    <style>
+        body {
+        font-family: 'Georgia';
+        }
+    </style>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+    <script src="https://nerdamer.com/js/nerdamer.core.js"></script>
+    <script type="text/javascript" src="styczna.js"></script>
+</head>
+<body>
+
+    <h1>Styczna </h1>
+    <h2>Podaj funkcję i punk </h2>
+    <button onclick="styczna('(-2x-3)(x^2+1)',-3)">$(-2x-3)(x^2+1)$</button>
+    
+    <h2>Podaj funkcję f() i funkcję g(x), oraz x </h2>
+    <button onclick="styczna('(x^2)/(2^x)','(x^2)/(2^x)',1)">$(x^2)/(2^x),(x^2)/(2^x),1$</button>
+    <p id="rozw"></p>
+    <p id="wykres"></p>
+    <a href="index.html">Powrót</a>
+    <div id="stopka">
+        <h2>Autorzy:</h2>
+        <h3>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</h3>
+    </div>

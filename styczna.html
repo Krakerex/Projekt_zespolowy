@@ -23,30 +23,16 @@
     <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
     <script src="https://nerdamer.com/js/nerdamer.core.js"></script>
-    <script type="text/javascript" src="wypuklosc.js"></script>
+    <script type="text/javascript" src="styczna.js"></script>
 </head>
 <body>
 
-    <h1>Wypukłość Funkcji </h1>
-    <h2>Podaj funkcję </h2>
-    <button onclick="wypuklosc('x^2*(2-math.log(x))')">$x^2*(2-ln(x))$</button>
-    <button onclick="wypuklosc('2*x^2+math.log(x)')">$2x^2+ln(x)$</button>
-    <button onclick="wypuklosc('x*math.log(1/x^2)')">$xln(1/x^2)$</button>
-
-    <label for = "fx">
-        Przykładowy format funkcji ( x^2*(2-math.log(x)) )
-    </label>
-    <br>
-    <input type="text" id="fx" name = "fx">
-    <br>
-    <label for = "zakres">
-         Zakres funkcji<br>
-    </label>
-    <input type="number" id="zakres" name = "zakres" value=20>
-    <br>
-    <button onclick=wypuklosc() type="button">
-        Oblicz
-    </button>
+    <h1>Styczna </h1>
+    <h2>Podaj funkcję i punk </h2>
+    <button onclick="styczna('(-2x-3)(x^2+1)',-3)">$(-2x-3)(x^2+1)$</button>
+    
+    <h2>Podaj funkcję f() i funkcję g(x), oraz x </h2>
+    <button onclick="styczna('(x^2)/(2^x)','(x^2)/(2^x)',1)">$(x^2)/(2^x),(x^2)/(2^x),1$</button>
     <p id="rozw"></p>
     <p id="wykres"></p>
     <a href="index.html">Powrót</a>

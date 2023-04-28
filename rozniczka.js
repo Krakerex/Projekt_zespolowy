@@ -1,4 +1,13 @@
-// do buttonow ze wzorami
+//zmienne
+var x0 = 0;
+var deltax = 0;
+var fun = 0;
+var funR = 0;
+var poch = 0;
+var pochR = 0;
+var wynik = 0;
+var wynikR = 0;
+// obsluga buttonow
 function f1(){
     const f1 = `
     <h4>Wybrany wzór: $\\sqrt[n]{x}$ </h4>
@@ -129,62 +138,19 @@ function drukowanie(odp){
     document.getElementById("rozw").innerHTML = wzor;
     MathJax.typeset();
 }
-// pobieranie zmiennych
+// pobieranie zmiennych i liczenie
 function pierw(){
     var n = document.getElementById("n").value;
     var x = document.getElementById("x").value;
     if(n <= 2){
         n = 2;
     }
-    dlapierw(x, n);
-}
-function potega(){
-    var n = document.getElementById("n").value;
-    var x = document.getElementById("x").value;
-    dlapoteg(x, n);
-}
-function logn(){
-    var x = document.getElementById("x").value;
-    dlaln(x);
-}
-function atan(){
-    var x = document.getElementById("x").value;
-    dlaatan(x);
-}
-function asin(){
-    var x = document.getElementById("x").value;
-    dlaasin(x);
-}
-function ex(){
-    var x = document.getElementById("x").value;
-    dlaex(x);
-}
-function cosul(){
-    var x = document.getElementById("x").value;
-    dlacoswul(x);
-}
-function pierwul(){
-    var n = document.getElementById("n").value;
-    var x = document.getElementById("x").value;
-    if(n <= 2){
-        n = 2;
-    }
-    dlapierwul(x,n);
-}
-// liczenie
-function dlapierw(x, n){
-    var x0 = 0;
-    var deltax = 0;
-    var fun = 0;
-    var poch = 0;
-    var pochR = 0;
-    var wynik = 0;
-    var wynikR = 0;
 
     x0 = Math.round(x);
     deltax = math.subtract(math.bignumber(x), math.bignumber(x0));
     
     fun = Math.pow(x0, 1/n);
+    funR = math.round(fun, 6);
     poch = 1 / (n * Math.pow(x0, (n-1)/n));
     pochR = math.round(poch, 6);
     wynik = fun + (poch * deltax);
@@ -194,24 +160,20 @@ function dlapierw(x, n){
             + "$f'(x) = \\dfrac{1}{n*x^\\frac{n-1}{n}}$<br>"
             + "$x_0 = " + x0 + "$<br>"
             + "$\\Delta x = " + deltax + "$ <br>"
-            + "$f(x_0) = f(" + x0 + ") = \\sqrt[" + n + "]{" + x0 + "} = " + fun + "$<br>"
+            + "$f(x_0) = f(" + x0 + ") = \\sqrt[" + n + "]{" + x0 + "} = " + funR + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = \\dfrac{1}{" + n + " * " + x0 + "^\\frac{" + (n - 1) + "}{" + n + "}} = " + pochR + "$<br>"
-            + "$\\sqrt[" + n + "]{" + x + "} \\approx " + fun + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
+            + "$\\sqrt[" + n + "]{" + x + "} \\approx " + funR + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
     drukowanie(odp);
 }
-function dlapoteg(x, n){
-    var x0 = 0;
-    var deltax = 0;
-    var fun = 0;
-    var poch = 0;
-    var pochR = 0;
-    var wynik = 0;
-    var wynikR = 0;
+function potega(){
+    var n = document.getElementById("n").value;
+    var x = document.getElementById("x").value;
 
     x0 = Math.round(x);
     deltax = math.subtract(math.bignumber(x), math.bignumber(x0));
     
     fun = Math.pow(x0, n);
+    funR = math.round(fun, 6);
     poch = n * Math.pow(x0, (n - 1));
     pochR = math.round(poch, 6);
     wynik = fun + (poch * deltax);
@@ -221,24 +183,19 @@ function dlapoteg(x, n){
             + "$f'(x) = n*x^{n-1}$<br>"
             + "$x_0 = " + x0 + "$<br>"
             + "$\\Delta x = " + deltax + "$ <br>"
-            + "$f(x_0) = f(" + x0 + ") = (" + x0 + ")^{" + n + "} = " + fun + "$<br>"
+            + "$f(x_0) = f(" + x0 + ") = (" + x0 + ")^{" + n + "} = " + funR + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = " + n + "*(" + x0 + ")^{" + (n - 1) + "} = " + pochR + "$<br>"
-            + "$(" + x + ")^{" + n + "} \\approx " + fun + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
+            + "$(" + x + ")^{" + n + "} \\approx " + funR + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
     drukowanie(odp);
 }
-function dlaln(x){
-    var x0 = 0;
-    var deltax = 0;
-    var fun = 0;
-    var poch = 0;
-    var pochR = 0;
-    var wynik = 0;
-    var wynikR = 0;
-
+function logn(){
+    var x = document.getElementById("x").value;
+    
     x0 = Math.round(x);
     deltax = math.subtract(math.bignumber(x), math.bignumber(x0));
 
     fun = Math.log(x0);
+    funR = math.round(fun, 6);
     poch = 1/x0;
     pochR = math.round(poch, 6);
     wynik = fun + (poch * deltax);
@@ -248,24 +205,19 @@ function dlaln(x){
             + "$f'(x) = \\dfrac{1}{x}$<br>"
             + "$x_0 = " + x0 + "$<br>"
             + "$\\Delta x = " + deltax + "$ <br>"
-            + "$f(x_0) = f(" + x0 + ") = \\ln(" + x0 + ") = " + fun + "$<br>"
+            + "$f(x_0) = f(" + x0 + ") = \\ln(" + x0 + ") = " + funR + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = \\dfrac{1}{" + x0 + "} = " + pochR + "$<br>"
-            + "$\\ln(" + x + ") \\approx " + fun + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
+            + "$\\ln(" + x + ") \\approx " + funR + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
     drukowanie(odp);
 }
-function dlaatan(x){
-    var x0 = 0;
-    var deltax = 0;
-    var fun = 0;
-    var poch = 0;
-    var pochR = 0;
-    var wynik = 0;
-    var wynikR = 0;
-
+function atan(){
+    var x = document.getElementById("x").value;
+    
     x0 = Math.round(x);
     deltax = math.subtract(math.bignumber(x), math.bignumber(x0));
 
     fun = Math.atan(x0);
+    funR = math.round(fun, 6);
     poch = 1 / (Math.pow(x0, 2) + 1);
     pochR = math.round(poch, 6);
     wynik = fun + (poch * deltax);
@@ -275,24 +227,19 @@ function dlaatan(x){
             + "$f'(x) = \\dfrac{1}{x^2+1}$<br>"
             + "$x_0 = " + x0 + "$<br>"
             + "$\\Delta x = " + deltax + "$ <br>"
-            + "$f(x_0) = f(" + x0 + ") = \\arctan(" + x0 + ") = " + fun + "$<br>"
+            + "$f(x_0) = f(" + x0 + ") = \\arctan(" + x0 + ") = " + funR + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = \\dfrac{1}{" + x0 + "^2+1} = " + pochR + "$<br>"
-            + "$\\arctan(" + x + ") \\approx " + fun + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
+            + "$\\arctan(" + x + ") \\approx " + funR + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
     drukowanie(odp);
 }
-function dlaasin(x){
-    var x0 = 0;
-    var deltax = 0;
-    var fun = 0;
-    var poch = 0;
-    var pochR = 0;
-    var wynik = 0;
-    var wynikR = 0;
+function asin(){
+    var x = document.getElementById("x").value;
     
     x0 = Math.round(x);
     deltax = math.subtract(math.bignumber(x), math.bignumber(x0));
 
     fun = Math.asin(x0);
+    funR = math.round(fun, 6);
     poch = 1 / (Math.sqrt(1 - Math.pow(x0, 2)));
     pochR = math.round(poch, 6);
     wynik = fun + (poch * deltax);
@@ -302,24 +249,19 @@ function dlaasin(x){
             + "$f'(x) = \\dfrac{1}{\\sqrt{1-x^2}}$<br>"
             + "$x_0 = " + x0 + "$<br>"
             + "$\\Delta x = " + deltax + "$ <br>"
-            + "$f(x_0) = f(" + x0 + ") = \\arcsin(" + x0 + ") = " + fun + "$<br>"
+            + "$f(x_0) = f(" + x0 + ") = \\arcsin(" + x0 + ") = " + funR + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = \\dfrac{1}{\\sqrt{1-"+ x0 + "^2}} = " + pochR + "$<br>"
-            + "$\\arcsin(" + x + ") \\approx " + fun + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
+            + "$\\arcsin(" + x + ") \\approx " + funR + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
     drukowanie(odp);
 }
-function dlaex(x){
-    var x0 = 0;
-    var deltax = 0;
-    var fun = 0;
-    var poch = 0;
-    var pochR = 0;
-    var wynik = 0;
-    var wynikR = 0; 
-
+function ex(){
+    var x = document.getElementById("x").value;
+    
     x0 = Math.round(x);
     deltax = math.subtract(math.bignumber(x), math.bignumber(x0));
 
     fun = Math.exp(x0);
+    funR = math.round(fun, 6);
     poch = Math.exp(x0);
     pochR = math.round(poch, 6);
     wynik = fun + (poch * deltax);
@@ -329,24 +271,19 @@ function dlaex(x){
             + "$f'(x) = {e}^x$<br>"
             + "$x_0 = " + x0 + "$<br>"
             + "$\\Delta x = " + deltax + "$ <br>"
-            + "$f(x_0) = f(" + x0 + ") = {e}^" + x0 + " = " + fun + "$<br>"
+            + "$f(x_0) = f(" + x0 + ") = {e}^" + x0 + " = " + funR + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = {e}^" + x0 + " = " + pochR + "$<br>"
-            + "${e}^{" + x + "} \\approx " + fun + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
+            + "${e}^{" + x + "} \\approx " + funR + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
     drukowanie(odp);
 }
-function dlacoswul(x){
-    var x0 = 0;
-    var deltax = 0;
-    var fun = 0;
-    var poch = 0;
-    var pochR = 0;
-    var wynik = 0;
-    var wynikR = 0;
-
+function cosul(){
+    var x = document.getElementById("x").value;
+    
     x0 = Math.round(x);
     deltax = math.subtract(math.bignumber(x), math.bignumber(x0));
 
     fun = (1 / Math.cos(x0));
+    funR = math.round(fun, 6);
     poch = (Math.sin(x0) / (Math.cos(x0) * Math.cos(x0)));
     pochR = math.round(poch, 6);
     wynik = fun + (poch * deltax);
@@ -356,20 +293,18 @@ function dlacoswul(x){
             + "$f'(x) = \\dfrac{\\sin(x)}{\\cos^2(x)}$<br>"
             + "$x_0 = " + x0 + "$<br>"
             + "$\\Delta x = " + deltax + "$ <br>"
-            + "$f(x_0) = f(" + x0 + ") = \\dfrac{1}{\\cos(" + x0 + ")} = " + fun + "$<br>"
+            + "$f(x_0) = f(" + x0 + ") = \\dfrac{1}{\\cos(" + x0 + ")} = " + funR + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = \\dfrac{\\sin(" + x0 + ")}{\\cos^2(" + x0 + ")} = " + pochR + "$<br>"
-            + "$\\dfrac{1}{\\cos(" + x + ")} \\approx " + fun + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
+            + "$\\dfrac{1}{\\cos(" + x + ")} \\approx " + funR + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
     drukowanie(odp);
 }
-function dlapierwul(x, n){
-    var x0 = 0;
-    var deltax = 0;
-    var fun = 0;
-    var poch = 0;
-    var pochR = 0;
-    var wynik = 0;
-    var wynikR = 0;
-
+function pierwul(){
+    var n = document.getElementById("n").value;
+    var x = document.getElementById("x").value;
+    if(n <= 2){
+        n = 2;
+    }
+    
     var pom1 = 0;
     var pom2 = 1;
     pom1 = math.sum(n, pom2);
@@ -380,6 +315,7 @@ function dlapierwul(x, n){
     
     dol = 1 / (n * Math.pow(x0, pom1 / n));
     fun = 1 / Math.pow(x0, 1 / n);
+    funR = math.round(fun, 6);
     poch = -1 / (1 / dol);
     pochR = math.round(poch, 6);
     wynik = fun + (poch * deltax);
@@ -389,8 +325,8 @@ function dlapierwul(x, n){
             + "$f'(x) = -\\dfrac{1}{n*x^\\frac{n+1}{n}}$<br>"
             + "$x_0 = " + x0 + "$<br>"
             + "$\\Delta x = " + deltax + "$ <br>"
-            + "$f(x_0) = f(" + x0 + ") = \\dfrac{1}{\\sqrt[" + n + "]{" + x0 + "}} = " + fun + "$<br>"
+            + "$f(x_0) = f(" + x0 + ") = \\dfrac{1}{\\sqrt[" + n + "]{" + x0 + "}} = " + funR + "$<br>"
             + "$f'(x_0) = f'(" + x0 + ") = -\\dfrac{1}{" + n + "*" + x0 + "^\\frac{" + pom1 + "}{" + n + "}} = " + pochR + "$<br>"
-            + "$\\dfrac{1}{\\sqrt[" + n + "]{" + x + "}} \\approx " + fun + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
+            + "$\\dfrac{1}{\\sqrt[" + n + "]{" + x + "}} \\approx " + funR + " + " + pochR + " * (" + deltax + ") \\approx " + wynikR + "$<br>";
     drukowanie(odp);
 }

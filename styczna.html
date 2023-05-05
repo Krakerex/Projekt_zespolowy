@@ -28,11 +28,14 @@
 <body>
 
     <h1>Styczna </h1>
-    <h2>Podaj funkcję i punk </h2>
-    <button onclick="styczna('(-2x-3)(x^2+1)',-3)">$(-2x-3)(x^2+1)$</button>
+    <h2>Obliczanie z funkcji i punktu </h2>
+    <button onclick="styczna1('(-2x-3)(x^2+1)',-3)">$$f(x)=(-2x-3)(x^2+1), x=-3$$</button>
+    <button onclick="styczna1('x^2-2x+1',3)">$$f(x)=x^2-2x+1,x=3$$</button>
+    <button onclick="styczna1('(-3x+1)/(x-4)',2)">$$f(x)=\frac{-3x+1}{x-4},x=2$$</button>
+    <h2>Obliczanie z funkcji f(x), funkcji g(x), oraz x </h2>
+    <button onclick="styczna2('(x^2)/(2^x)','(x^2)/(2^x)',1)">$$f(x)=\frac{(x^2)}{(2^x)},g(x)=\frac{(x^2)}{(2^x)},x=1$$</button>
+    <button onclick="styczna2('(x-1)/(x^2-1)',1,0)">$$f(x)=\frac{(x^2)}{(2^x)},g(x)=\frac{(x^2)}{(2^x)},x=1$$</button>
     
-    <h2>Podaj funkcję f() i funkcję g(x), oraz x </h2>
-    <button onclick="styczna('(x^2)/(2^x)','(x^2)/(2^x)',1)">$(x^2)/(2^x),(x^2)/(2^x),1$</button>
     <p id="rozw"></p>
     <p id="wykres"></p>
     <a href="index.html">Powrót</a>

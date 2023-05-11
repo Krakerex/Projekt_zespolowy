@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxMinFunkcji</title>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$']]
+          }
+        };
+    </script>
+    <style>
+        body {
+        font-family: 'Georgia';
+        }
+    </style>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+    <script type="text/javascript" src="MaxMinFunkcji.js"></script>
+</head>
+<body>
+
+    <h1>Znalezienie Minimum i Maksimum funkcji </h1>
+    
+    <br>
+    <label for = "liczba">
+      Wybierz wzór: 
+    </label>
+    <br>
+    <button onclick=ff1()>$ax^2+bx+c$</button>
+   
+    <div id = "foremki"></div>
+    <p id="rozw"></p>
+    <p id="krok"></p>
+    <a href="index.html">Powrót</a>
+    <div id="stopka">
+        <h2>Autorzy:</h2>
+        <h3>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</h3>
+    </div>

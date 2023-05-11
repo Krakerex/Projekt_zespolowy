@@ -15,29 +15,55 @@ function derivative(expression, variable) {
     document.getElementById('rozw').textContent = odp;
     MathJax.typeset();
   }
-function test(){
-    const test = `
-        <h4>Wybrany wzór: $\\dfrac{1}{x^n}$ </h4>
-        <label for="n">
-            Podaj n 
-        </label>
-        <input type="number" id="n" name = "n" value = "1">
-        <br><br>
-        <button onclick=test1()>
-            Pochodna
-        </button>
-    `;
-    document.getElementById("testoweformy").innerHTML = test;
-    MathJax.typeset();
-}
-function test1(){
-    //var n = document.getElementById("n").value;
-    const t = "$$f'(x)=\\lim_{\\Delta x\\rightarrow 0}\\frac{f(x + \\Delta) - f(x)}{\\Delta x}$$ <br>" 
+function f1(){
+    const res = "$$f'(x)=\\lim_{\\Delta x\\rightarrow 0}\\frac{f(x + \\Delta) - f(x)}{\\Delta x}$$ <br>" 
                + "$$ f'(x_0)=\\lim_{\\Delta x \\rightarrow 0} \\frac{\\frac{1}{x_0 + \\Delta x} - \\frac{1}{x_0}}{\\Delta x} = "
                + " \\lim_{\\Delta x \\rightarrow 0} \\frac{\\frac{x_0 - x_0 - \\Delta x}{(x_0 + \\Delta x)x_0}}{\\Delta x} = "
                + " \\lim_{\\Delta x \\rightarrow 0} \\frac{- \\Delta x}{(x_0 + \\Delta x)x_0 \\cdot \\Delta x} = "
                + " \\lim_{\\Delta x \\rightarrow 0} \\frac{-1}{(x_0 + \\Delta x)x_0} = "
                + " - \\frac{1}{x_0 ^ 2} $$";
-    document.getElementById("rozw").innerHTML = t;
+    document.getElementById("rozw").innerHTML = res;
+    MathJax.typeset();
+}
+function f2(){
+    const res = "$$f'(x)=\\lim_{\\Delta x\\rightarrow 0}\\frac{f(x + \\Delta) - f(x)}{\\Delta x}$$ <br>" 
+                + "$$ f'(x_0)=\\lim_{\\Delta x \\rightarrow 0}\\frac{\\left(x_0 + \\Delta x\\right)^2-x_0^2}{\\Delta x} = "
+                + " \\lim_{\\Delta x\\rightarrow 0}\\frac{x_0^2+2\\cdot x_0\\cdot\\Delta x+\\Delta x^2-x_0^2}{\\Delta x} = "
+                + " \\lim_{\\Delta x\\rightarrow 0}\\frac{2\\cdot x_0\\cdot\\Delta x+\\Delta x^2}{\\Delta x} = "
+                + " \\lim_{\\Delta x\\rightarrow 0}2\\cdot x_0+\\Delta x = "
+                + " 2\\cdot x_0 $$";
+    document.getElementById("rozw").innerHTML = res;
+    MathJax.typeset();
+}
+function f3(){
+    const res = "$$f'(x)=\\lim_{\\Delta x\\rightarrow 0}\\frac{f(x + \\Delta) - f(x)}{\\Delta x}$$ <br>" 
+               + "$$ f'(x_0)=\\lim_{\\Delta x\\rightarrow 0}\\frac{\\sqrt{x_0+\\Delta x}-\\sqrt{x_0}}{\\Delta x} = "
+               + " \\lim_{\\Delta x\\rightarrow 0}\\frac{\\sqrt{x_0+\\Delta x}-\\sqrt{x_0}}{\\Delta x}\\cdot\\frac{\\sqrt{x_0+\\Delta x}+\\sqrt{x_0}}{\\sqrt{x_0+\\Delta x}+\\sqrt{x_0}} = "
+               + " \\lim_{\\Delta x \\rightarrow 0}\\frac{x_0+\\Delta x-x_0}{\\Delta x\\cdot\\left(\\sqrt{x_0+\\Delta x}+\\sqrt{x_0}\\right)} = "
+               + " \\lim_{\\Delta x\\rightarrow 0}\\frac{1}{\\sqrt{x_0+\\Delta x}+\\sqrt{x_0}} = "
+               + " \\frac{1}{2\\cdot \\sqrt{x_0}} $$";
+    document.getElementById("rozw").innerHTML = res;
+    MathJax.typeset();
+}
+function f4(){
+    const res = "$$f'(x)=\\lim_{\\Delta x\\rightarrow 0}\\frac{f(x + \\Delta) - f(x)}{\\Delta x}$$ <br>" 
+               + "$$ f'(x_0)=\\lim_{\\Delta x\\rightarrow 0}\\frac{sin \\left(x_0+\\Delta x\\right)-sin\\left(x_0\\right)}{\\Delta x} $$ <br>"
+               + "$$ \\left[ \\sin{\\alpha} - \\sin{ \\beta} = 2 \\cdot \\sin{\\frac{\\alpha - \\beta}{2}} \\cdot \\cos{\\frac{\\alpha + \\beta}{2}} \\right] $$ <br>"
+               + "$$ f'(x_0) = \\lim_{\\Delta x\\rightarrow 0}\\frac{2\\cdot sin \\left(\\cfrac{x_0+\\Delta x-x_0}{2}\\right)\\cdot cos\\left(\\cfrac{x_0+\\Delta x+x_0}{2} \\right)}{\\Delta x} = "
+               + " \\lim_{\\Delta x\\rightarrow 0}\\frac{2\\cdot sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\Delta x}\\cdot cos\\left(x_0+\\cfrac{\\Delta x}{2} \\right) = "
+               + " \\lim_{\\Delta x\\rightarrow 0}\\frac{sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\cfrac{\\Delta x}{2}}\\cdot cos\\left(x_0+\\cfrac{\\Delta x}{2}\\right) = "
+               + " 1\\cdot cos\\left(x_0\\right)=cos \\left(x_0\\right) $$";
+    document.getElementById("rozw").innerHTML = res;
+    MathJax.typeset();
+}
+function f5(){
+    const res = "$$f'(x)=\\lim_{\\Delta x\\rightarrow 0}\\frac{f(x + \\Delta) - f(x)}{\\Delta x}$$ <br>" 
+               + "$$ f'(x_0)=\\lim_{\\Delta x\\rightarrow 0}\\frac{cos \\left(x_0+\\Delta x\\right)-cos\\left(x_0\\right)}{\\Delta x} $$ <br>"
+               + "$$ \\left[ \\cos{\\alpha} - \\cos{ \\beta} = -2 \\cdot \\sin{\\frac{\\alpha - \\beta}{2}} \\cdot \\sin{\\frac{\\alpha + \\beta}{2}} \\right] $$ <br>"
+               + "$$ f'(x_0) = \\lim_{\\Delta x\\rightarrow 0}\\frac{-2\\cdot sin \\left(\\cfrac{x_0+\\Delta x-x_0}{2}\\right)\\cdot sin\\left(\\cfrac{x_0+\\Delta x+x_0}{2}\\right)}{\\Delta x} = "
+               + " \\lim_{\\Delta x\\rightarrow 0}\\frac{-2\\cdot sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\Delta x}\\cdot sin\\left(x_0+\\cfrac{\\Delta x}{2}\\right) = "
+               + " \\lim_{\\Delta x\\rightarrow 0}-\\frac{sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\cfrac{\\Delta x}{2}}\\cdot sin\\left(x_0+\\cfrac{\\Delta x}{2}\\right) = "
+               + " -1\\cdot sin \\left(x_0\\right)=-sin \\left(x_0\\right) $$";
+    document.getElementById("rozw").innerHTML = res;
     MathJax.typeset();
 }

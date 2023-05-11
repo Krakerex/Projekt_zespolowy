@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parzystość</title>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$']]
+          },
+          chtml: {
+            displayAlign: 'left'
+          }
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+    <script type="text/javascript" src="parzystosc.js"></script>
+    <style>
+        body {
+        font-family: 'Georgia';
+        }
+    </style>
+</head>
+<body>
+    <h2> Sprawdzanie parzystości funkcji </h2>
+    <div id="foremki">
+        <label for="expression">
+            Podaj wzór
+        </label>
+        <input type="text" name="expression" id="expression"> <br><br>
+        <button onclick="f1()">Sprawdź</button>
+    </div>
+    <br><br>
+    <button onclick="t1()">$x^2$</button>
+    <p id="rozw"></p>
+    <a href="index.html">Powrót</a>
+    <div id="stopka">
+        <h2>Autorzy:</h2>
+        <h3>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</h3>
+    </div>
+</body>
+</html>

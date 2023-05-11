@@ -47,8 +47,9 @@ function f3(){
 }
 function f4(){
     const res = "$$f'(x)=\\lim_{\\Delta x\\rightarrow 0}\\frac{f(x + \\Delta) - f(x)}{\\Delta x}$$ <br>" 
-               + "$$ f'(x_0)=\\lim_{\\Delta x\\rightarrow 0}\\frac{sin \\left(x_0+\\Delta x\\right)-sin\\left(x_0\\right)}{\\Delta x} = "
-               + " \\lim_{\\Delta x\\rightarrow 0}\\frac{2\\cdot sin \\left(\\cfrac{x_0+\\Delta x-x_0}{2}\\right)\\cdot cos\\left(\\cfrac{x_0+\\Delta x+x_0}{2} \\right)}{\\Delta x} = "
+               + "$$ f'(x_0)=\\lim_{\\Delta x\\rightarrow 0}\\frac{sin \\left(x_0+\\Delta x\\right)-sin\\left(x_0\\right)}{\\Delta x} $$ <br>"
+               + "$$ \\left[ \\sin{\\alpha} - \\sin{ \\beta} = 2 \\cdot \\sin{\\frac{\\alpha - \\beta}{2}} \\cdot \\cos{\\frac{\\alpha + \\beta}{2}} \\right] $$ <br>"
+               + "$$ f'(x_0) = \\lim_{\\Delta x\\rightarrow 0}\\frac{2\\cdot sin \\left(\\cfrac{x_0+\\Delta x-x_0}{2}\\right)\\cdot cos\\left(\\cfrac{x_0+\\Delta x+x_0}{2} \\right)}{\\Delta x} = "
                + " \\lim_{\\Delta x\\rightarrow 0}\\frac{2\\cdot sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\Delta x}\\cdot cos\\left(x_0+\\cfrac{\\Delta x}{2} \\right) = "
                + " \\lim_{\\Delta x\\rightarrow 0}\\frac{sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\cfrac{\\Delta x}{2}}\\cdot cos\\left(x_0+\\cfrac{\\Delta x}{2}\\right) = "
                + " 1\\cdot cos\\left(x_0\\right)=cos \\left(x_0\\right) $$";
@@ -57,8 +58,9 @@ function f4(){
 }
 function f5(){
     const res = "$$f'(x)=\\lim_{\\Delta x\\rightarrow 0}\\frac{f(x + \\Delta) - f(x)}{\\Delta x}$$ <br>" 
-               + "$$ f'(x_0)=\\lim_{\\Delta x\\rightarrow 0}\\frac{cos \\left(x_0+\\Delta x\\right)-cos\\left(x_0\\right)}{\\Delta x} = "
-               + " \\lim_{\\Delta x\\rightarrow 0}\\frac{-2\\cdot sin \\left(\\cfrac{x_0+\\Delta x-x_0}{2}\\right)\\cdot sin\\left(\\cfrac{x_0+\\Delta x+x_0}{2}\\right)}{\\Delta x} = "
+               + "$$ f'(x_0)=\\lim_{\\Delta x\\rightarrow 0}\\frac{cos \\left(x_0+\\Delta x\\right)-cos\\left(x_0\\right)}{\\Delta x} $$ <br>"
+               + "$$ \\left[ \\cos{\\alpha} - \\cos{ \\beta} = -2 \\cdot \\sin{\\frac{\\alpha - \\beta}{2}} \\cdot \\sin{\\frac{\\alpha + \\beta}{2}} \\right] $$ <br>"
+               + "$$ f'(x_0) = \\lim_{\\Delta x\\rightarrow 0}\\frac{-2\\cdot sin \\left(\\cfrac{x_0+\\Delta x-x_0}{2}\\right)\\cdot sin\\left(\\cfrac{x_0+\\Delta x+x_0}{2}\\right)}{\\Delta x} = "
                + " \\lim_{\\Delta x\\rightarrow 0}\\frac{-2\\cdot sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\Delta x}\\cdot sin\\left(x_0+\\cfrac{\\Delta x}{2}\\right) = "
                + " \\lim_{\\Delta x\\rightarrow 0}-\\frac{sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\cfrac{\\Delta x}{2}}\\cdot sin\\left(x_0+\\cfrac{\\Delta x}{2}\\right) = "
                + " -1\\cdot sin \\left(x_0\\right)=-sin \\left(x_0\\right) $$";

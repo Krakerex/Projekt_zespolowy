@@ -4,12 +4,16 @@ function tangentLine(funcf, funcg, point) {
     return equation; // zwracanie równania stycznej
   }
   function styczna1(func,point){
+    var orgfunc;
+    var orgpoint;
     if(func==null){
       func=document.getElementById("fx").value
       
     }
+    orgfunc=func;
     if(point==null){
       point=document.getElementById("punkt").value
+      orgpoint=point;
       if (point.startsWith("f(")) 
         {
           gx=wyciągnij(point);
@@ -28,7 +32,7 @@ function tangentLine(funcf, funcg, point) {
     const yIntercept = fPoint - dfPoint * point; // obliczanie punktu przecięcia z osią Y
     const equation = `${dfPoint}x + ${yIntercept}`; // równanie stycznej w postaci stringa
     const equation2=equation.replace('x','*'+point).replace(yIntercept,"b");
-    druk(point,equation,df,dfPoint,fPoint,equation2,yIntercept)
+    druk(point,equation,df,dfPoint,fPoint,equation2,yIntercept,orgfunc,orgpoint)
   }
   
   function styczna2(funcf,funcg,point){
@@ -41,7 +45,7 @@ function tangentLine(funcf, funcg, point) {
     const yIntercept = fPoint - dfPoint * xpoint; // obliczanie punktu przecięcia z osią Y
     const equation = `${dfPoint}x + ${yIntercept}`; // równanie stycznej w postaci stringa
     const equation2=equation.replace('x','*'+point).replace(yIntercept,"b");
-    druk(point,equation,df,dfPoint,fPoint,equation2,yIntercept)
+    druk(point,equation,df,dfPoint,fPoint,equation2,yIntercept,func,point)
   }
   function calculateFunctionValue(expression, x) {
     const parsedExpression = math.parse(expression); // parsowanie wyrażenia
@@ -49,15 +53,18 @@ function tangentLine(funcf, funcg, point) {
     const evaluatedExpression = parsedExpression.evaluate(scope); // obliczenie wartości wyrażenia dla podanej wartości x
     return evaluatedExpression; // zwrócenie wyniku
   }
-  function druk(point,x,pochodna,d0,f0,equation2,b){
-    document.getElementById("rozw").innerHTML = "$f'(x)="+ pochodna + "$<br>";
-    document.getElementById("rozw").innerHTML += "$f'(x_0)=f'("+point+")="+ d0 + "$<br>";
-    document.getElementById("rozw").innerHTML += "$y="+ f0+"x+b" + "$<br>";
-    document.getElementById("rozw").innerHTML += "$f(x_0)=f("+point+")="+ d0 + "$<br>";
-    document.getElementById("rozw").innerHTML += "$(x_0,f(x_0))=("+point+","+f0+")$<br>";
-    document.getElementById("rozw").innerHTML += "$"+f0+"="+equation2+"$<br>";
-    document.getElementById("rozw").innerHTML += "$b="+b+"$<br>";
-    document.getElementById("rozw").innerHTML += "$y="+ x + "$";
+  function druk(point,x,pochodna,d0,f0,equation2,b,func,point){
+    const rozwiazanie="<h3> Styczna: "+func+", Punkt: "+point+"</h3>"
+     + "$f'(x)="+ pochodna + "$<br>"
+     + "$f'(x_0)=f'("+point+")="+ d0 + "$<br>"
+     + "$y="+ f0+"x+b" + "$<br>"
+     + "$f(x_0)=f("+point+")="+ d0 + "$<br>"
+     + "$(x_0,f(x_0))=("+point+","+f0+")$<br>"
+     + "$"+f0+"="+equation2+"$<br>"
+     + "$b="+b+"$<br>"
+     + "$y="+ x + "$";
+     document.getElementById("rozw").innerHTML=rozwiazanie
+     addToCart(rozwiazanie);
     MathJax.typeset();
 }
 function wyciągnij(myString){

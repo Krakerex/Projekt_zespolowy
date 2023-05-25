@@ -19,41 +19,48 @@ function addToCart(item) {
   }
   
   // Funkcja usuwająca napis z koszyka
-  function removeFromCart(item) {
-    // Pobieramy koszyk z localStorage
+  function removeFromCart(index) {
     let cart = localStorage.getItem('cart');
   
-    // Jeśli koszyk istnieje, parsujemy go z formatu JSON do tablicy
     if (cart) {
       cart = JSON.parse(cart);
   
-      // Usuwamy napis z koszyka
-      const index = cart.indexOf(item);
-      if (index !== -1) {
+      if (index !== -1 && index < cart.length) {
         cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCart(); // Refresh the displayed cart after removing the item
       }
-  
-      // Zapisujemy zaktualizowany koszyk w localStorage
-      localStorage.setItem('cart', JSON.stringify(cart));
     }
   }
   
   // Funkcja wyświetlająca zawartość koszyka
   function displayCart() {
-    // Pobieramy koszyk z localStorage
     let cart = localStorage.getItem('cart');
   
-    // Jeśli koszyk istnieje, parsujemy go z formatu JSON do tablicy
     if (cart) {
       cart = JSON.parse(cart);
+      document.getElementById("koszyk").innerHTML = "";
   
-      // Wyświetlamy zawartość koszyka
-      console.log('Cart:', cart);
+      const div = document.getElementById("koszyk");
+  
+      cart.forEach((item, index) => {
+        div.innerHTML += item + "<br>";
+        const btn = document.createElement("button");
+        btn.textContent = "Usuń";
+        div.appendChild(btn);
+      });
+  
+      div.addEventListener("click", function(event) {
+        if (event.target.matches("button")) {
+          const buttons = div.getElementsByTagName("button");
+          const buttonIndex = Array.from(buttons).indexOf(event.target);
+          removeFromCart(buttonIndex);
+        }
+      });
+  
       MathJax.typeset();
-  
-      // Tutaj można zaimplementować kod do wyświetlania koszyka na stronie
-      // np. generowanie listy produktów, sumy koszyka itp.
     } else {
+      document.getElementById("koszyk").innerHTML = 'Cart is empty.';
       console.log('Cart is empty.');
     }
   }

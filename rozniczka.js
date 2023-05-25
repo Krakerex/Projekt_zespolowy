@@ -136,6 +136,8 @@ function f8(){
 function drukowanie(odp){
     const wzor = `<h3> Wynik </h3>` + "$f(x_0 + \\Delta x) \\approx f(x_0) + f'(x_0)\\Delta x$ <br><br>" + odp;
     document.getElementById("rozw").innerHTML = wzor;
+    addToCart(wzor);
+    displayCart();
     MathJax.typeset();
 }
 // pobieranie zmiennych i liczenie

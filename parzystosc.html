@@ -8,6 +8,7 @@
     <script id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
+    <script src="../CART.js"></script>
     <script>
         MathJax = {
           tex: {
@@ -27,7 +28,8 @@
     </style>
 </head>
 <body>
-    <h2> Sprawdzanie parzystości funkcji </h2>
+    <button id="send-but" onclick="sendToCart()">DODAJ</button>
+    <h2 id="task"> Sprawdzanie parzystości funkcji </h2>
     <div id="foremki">
         <label for="expression">
             Podaj wzór
@@ -37,7 +39,7 @@
     </div>
     <br><br>
     <button onclick="t1()">$x^2 -1$</button>
-    <p id="rozw"></p>
+    <p id="solution"></p>
     <a href="index.html">Powrót</a>
     <div id="stopka">
         <h2>Autorzy:</h2>

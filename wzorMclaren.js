@@ -42,5 +42,5 @@ function maclaurinSeries(func, x, n) {
 
     var x = 0.2;
     var result = Math.exp(2*x);
-    document.getElementById("rozw").innerHTML = "Wynik dla x=" + x + ": " + result;}
+    document.getElementById("solution").innerHTML = "Wynik dla x=" + x + ": " + result;}
   

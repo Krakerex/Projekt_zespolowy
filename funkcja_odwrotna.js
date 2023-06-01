@@ -39,7 +39,7 @@ function ff1(){
 function obliczf1(){
   const y = document.getElementById("y").value;
   const argument = inverseFunction(fkw, y);
-  document.getElementById("rozw").innerHTML ="Wynik:  " + argument ;
+  document.getElementById("solution").innerHTML ="Wynik:  " + argument ;
 }
 
 function ff2(){
@@ -59,7 +59,7 @@ function ff2(){
 function obliczf2(){
   const y = document.getElementById("y").value;
   const argument = inverseFunction(fsin, y);
-  document.getElementById("rozw").innerHTML ="Wynik:  " + argument ;
+  document.getElementById("solution").innerHTML ="Wynik:  " + argument ;
   // dla 0.2 zwróci około 0.5236 (czyli około 30 stopni w radianach)
 }
 
@@ -81,7 +81,7 @@ function ff3(){
 function obliczf3(){
   const y = document.getElementById("y").value;
   const argument = inverseFunction(fexp, y);
-  document.getElementById("rozw").innerHTML ="Wynik:  " + argument ;
+  document.getElementById("solution").innerHTML ="Wynik:  " + argument ;
 }
 
 function ff4(){
@@ -102,7 +102,7 @@ function ff4(){
 function obliczf4(){
   const y = document.getElementById("y").value;
   const argument = inverseFunction(fwiel, y);
-  document.getElementById("rozw").innerHTML ="Wynik:  " + argument ;
+  document.getElementById("solution").innerHTML ="Wynik:  " + argument ;
 }
 
 function fexp(x) {
@@ -131,7 +131,7 @@ function fkw(x) {
   const wynikOdwrotny = obliczFunkcjeOdwrotna(funkcja, liczba);
 
   document.getElementById(
-    "rozw"
+    "solution"
   ).value = `Dla funkcji ${funkcjaTekst}, liczby ${liczba}:\nF(${liczba}) = ${wynikFunkcji.toFixed(
     5
   )}\nF^(-1)(${liczba}) = ${wynikOdwrotny.toFixed(5)}`;
@@ -140,5 +140,5 @@ function fkw(x) {
   
   const y = 4;
   const argument = inverseFunction(f, y);
-  document.getElementById("rozw").innerHTML = "Y wynosi: " + y +"Wynik:  " + argument ;
+  document.getElementById("solution").innerHTML = "Y wynosi: " + y +"Wynik:  " + argument ;
 }*/

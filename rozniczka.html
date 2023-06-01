@@ -22,10 +22,11 @@
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
     <script type="text/javascript" src="rozniczka.js"></script>
-    <script src="cart.js"></script>
+    <script src="../CART.js"></script>
 </head>
 <body>
-    <h2> Za pomocą różniczki zupełnej oblicz przybliżoną wartość wyrażenia</h3>
+    <button id="send-but" onclick="sendToCart()">DODAJ</button>
+    <h2 id="task"> Za pomocą różniczki zupełnej oblicz przybliżoną wartość wyrażenia</h3>
     <h3> Wybierz wzór</h3>
     <button onclick=f1()>$\sqrt[n]{x}$</button>
     <button onclick=f2()>$(x)^n$</button>
@@ -37,14 +38,12 @@
     <button onclick=f8()>$\dfrac{1}{\sqrt[n]{x}}$</button>
     <br><br><br>
     <div id = "foremki"></div>
-    <p id="rozw"></p>
+    <p id="solution"></p>
     <p id="test"></p>
     <a href="index.html">Powrót</a>
     <div id="stopka">
         <h2>Autorzy:</h2>
         <h3>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</h3>
-        <button onclick=displayCart()>Koszyk</button>
     </div>
-    <div id="koszyk"></div>
 </body>
 </html>

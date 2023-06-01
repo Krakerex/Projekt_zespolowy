@@ -12,6 +12,7 @@
           }
         };
     </script>
+    <script src="../CART.js"></script>
     <style>
         body {
         font-family: 'Georgia';
@@ -25,8 +26,8 @@
     <script type="text/javascript" src="MaxMinFunkcji.js"></script>
 </head>
 <body>
-
-    <h1>Znalezienie Minimum i Maksimum funkcji </h1>
+  <button id="send-but" onclick="sendToCart()">DODAJ</button>
+    <h1 id="task">Znalezienie Minimum i Maksimum funkcji </h1>
     
     <br>
     <label for = "liczba">
@@ -36,8 +37,10 @@
     <button onclick=ff1()>$ax^2+bx+c$</button>
    
     <div id = "foremki"></div>
+    <div id="solution">
     <p id="rozw"></p>
     <p id="krok"></p>
+    </div>
     <a href="index.html">Powrót</a>
     <div id="stopka">
         <h2>Autorzy:</h2>

@@ -12,7 +12,7 @@ function derivative(expression, variable) {
     const res = math.parse(result).toTex(); 
     const odp = "$$ f\\left(x \\right) = " + ex + "$$"
                 + "$$ f' \\left(x \\right) = f' \\left(" + ex + "\\right) = " +  res + "$$";
-    document.getElementById('rozw').textContent = odp;
+    document.getElementById('solution').textContent = odp;
     MathJax.typeset();
   }
 function f1(){
@@ -22,7 +22,7 @@ function f1(){
                + " \\lim_{\\Delta x \\rightarrow 0} \\frac{- \\Delta x}{(x_0 + \\Delta x)x_0 \\cdot \\Delta x} = "
                + " \\lim_{\\Delta x \\rightarrow 0} \\frac{-1}{(x_0 + \\Delta x)x_0} = "
                + " - \\frac{1}{x_0 ^ 2} $$";
-    document.getElementById("rozw").innerHTML = res;
+    document.getElementById("solution").innerHTML = res;
     MathJax.typeset();
 }
 function f2(){
@@ -32,7 +32,7 @@ function f2(){
                 + " \\lim_{\\Delta x\\rightarrow 0}\\frac{2\\cdot x_0\\cdot\\Delta x+\\Delta x^2}{\\Delta x} = "
                 + " \\lim_{\\Delta x\\rightarrow 0}2\\cdot x_0+\\Delta x = "
                 + " 2\\cdot x_0 $$";
-    document.getElementById("rozw").innerHTML = res;
+    document.getElementById("solution").innerHTML = res;
     MathJax.typeset();
 }
 function f3(){
@@ -42,7 +42,7 @@ function f3(){
                + " \\lim_{\\Delta x \\rightarrow 0}\\frac{x_0+\\Delta x-x_0}{\\Delta x\\cdot\\left(\\sqrt{x_0+\\Delta x}+\\sqrt{x_0}\\right)} = "
                + " \\lim_{\\Delta x\\rightarrow 0}\\frac{1}{\\sqrt{x_0+\\Delta x}+\\sqrt{x_0}} = "
                + " \\frac{1}{2\\cdot \\sqrt{x_0}} $$";
-    document.getElementById("rozw").innerHTML = res;
+    document.getElementById("solution").innerHTML = res;
     MathJax.typeset();
 }
 function f4(){
@@ -53,7 +53,7 @@ function f4(){
                + " \\lim_{\\Delta x\\rightarrow 0}\\frac{2\\cdot sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\Delta x}\\cdot cos\\left(x_0+\\cfrac{\\Delta x}{2} \\right) = "
                + " \\lim_{\\Delta x\\rightarrow 0}\\frac{sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\cfrac{\\Delta x}{2}}\\cdot cos\\left(x_0+\\cfrac{\\Delta x}{2}\\right) = "
                + " 1\\cdot cos\\left(x_0\\right)=cos \\left(x_0\\right) $$";
-    document.getElementById("rozw").innerHTML = res;
+    document.getElementById("solution").innerHTML = res;
     MathJax.typeset();
 }
 function f5(){
@@ -64,6 +64,6 @@ function f5(){
                + " \\lim_{\\Delta x\\rightarrow 0}\\frac{-2\\cdot sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\Delta x}\\cdot sin\\left(x_0+\\cfrac{\\Delta x}{2}\\right) = "
                + " \\lim_{\\Delta x\\rightarrow 0}-\\frac{sin \\left(\\cfrac{\\Delta x}{2}\\right)}{\\cfrac{\\Delta x}{2}}\\cdot sin\\left(x_0+\\cfrac{\\Delta x}{2}\\right) = "
                + " -1\\cdot sin \\left(x_0\\right)=-sin \\left(x_0\\right) $$";
-    document.getElementById("rozw").innerHTML = res;
+    document.getElementById("solution").innerHTML = res;
     MathJax.typeset();
 }

@@ -23,14 +23,16 @@
     <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
     <script type="text/javascript" src="funkcja_odwrotna.js"></script>
+    <script src="../CART.js"></script>
+</head>
 </head>
 <body>
-
-    <h1>Funkcje odwrotne  </h1>
+    <button id="send-but" onclick="sendToCart()">DODAJ</button>
+    <h1 id="task">Znajdź funkcję odwrotną:  </h1>
     
     <br>
     <label for = "liczba">
-        Wybierz liczbe do znalezienia funkcji:
+        Wybierz liczbe do znalezienia funkcji :
     </label>
     <br>
     <button onclick=ff1()>$(x)^2$</button>
@@ -38,7 +40,7 @@
     <button onclick=ff3()>$(e)^x - 5$</button>
     <button onclick=ff4()>$\dfrac{(x)^3-1}{(x)-1}-2$</button>
     <div id = "foremki"></div>
-    <p id="rozw"></p>
+    <p id="solution"></p>
     <a href="index.html">Powrót</a>
     <div id="stopka">
         <h2>Autorzy:</h2>

@@ -16,6 +16,6 @@ function t1(){
               + "$f\\left(x\\right) = x^2-1$ <br>"
               + "$f\\left(-x\\right) = \\left(-x\\right)^2-1=x^2-1=f\\left(x\\right)$ <br><br>"
               + "Funkcja $f\\left(x\\right) = x^2-1$ jest parzysta";
-    document.getElementById('rozw').innerHTML = odp;
+    document.getElementById('solution').innerHTML = odp;
     MathJax.typeset();
 }

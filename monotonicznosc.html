@@ -16,9 +16,11 @@
         <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="monotonicznosc.js"></script>
+        <script src="../CART.js"></script>
     </head>
     <body>
-        <h3>Zbadaj monotoniczność ciągu o wyrazie ogólnym:</h3>
+        <button id="send-but" onclick="sendToCart()">DODAJ</button>
+        <h3 id="task">Zbadaj monotoniczność ciągu o wyrazie ogólnym:</h3>
         <button onclick = isMonotonic(przyklad1)>
             $\ a_n = \frac{3^n}{(n+3)!}$
         </button>
@@ -31,7 +33,7 @@
             $\ a_n = \frac{3^n}{(3n)!}$
         </button>
         
-        <p id="rozw"></p>
+        <p id="solution"></p>
 
         <div id="stopka">
             <p>Autorzy:</p>

@@ -35,14 +35,14 @@ function przyklad1(n) {
     }
     
     if (increasing) {
-        document.getElementById("rozw").innerHTML = "Dla n<0 i n<100 Ciąg jest rosnący." ;
+        document.getElementById("solution").innerHTML = "Dla n<0 i n<100 Ciąg jest rosnący." ;
     } else if (decreasing) {
-        document.getElementById("rozw").innerHTML = "Dla n<0 i n<100 Ciąg jest malejacy." ;
+        document.getElementById("solution").innerHTML = "Dla n<0 i n<100 Ciąg jest malejacy." ;
     } else if(constant){
-        document.getElementById("rozw").innerHTML = "Dla n<0 i n<100 Ciag jest staly." ;
+        document.getElementById("solution").innerHTML = "Dla n<0 i n<100 Ciag jest staly." ;
     }
     else{
-        document.getElementById("rozw").innerHTML = "Dla n<0 i n<100 Ciąg nie jest monotoniczny." ;
+        document.getElementById("solution").innerHTML = "Dla n<0 i n<100 Ciąg nie jest monotoniczny." ;
     }
   }
   

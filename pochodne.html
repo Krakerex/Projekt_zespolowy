@@ -20,6 +20,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
     <script type="text/javascript" src="pochodne.js"></script>
+    <script src="../CART.js"></script>
     <style>
         body {
         font-family: 'Georgia';
@@ -34,7 +35,8 @@
     </style>
 </head>
 <body>
-    <h2> Obliczanie pochodnej funkcji </h2>
+    <button id="send-but" onclick="sendToCart()">DODAJ</button>
+    <h2 id="task"> Obliczanie pochodnej funkcji </h2>
     <div id = "sciaga">
         <h3> Ściąga </h3>
         <table>
@@ -86,7 +88,7 @@
     <button onclick=f4()>$$\sin\left(x\right)$$</button>
     <button onclick=f5()>$$\cos\left(x\right)$$</button>
     <br><br>
-    <p id="rozw"></p>
+    <p id="solution"></p>
     <a href="index.html">Powrót</a>
     <div id="stopka">
         <h2>Autorzy:</h2>

@@ -24,11 +24,11 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
     <script src="https://nerdamer.com/js/nerdamer.core.js"></script>
     <script type="text/javascript" src="styczna.js"></script>
-    <script src="cart.js"></script>
+    <script src="../CART.js"></script>
 </head>
 <body>
-
-    <h1>Styczna </h1>
+    <button id="send-but" onclick="sendToCart()">DODAJ</button>
+    <h1 id="task">Styczna </h1>
     <h2>Własny przykład</h2>
     <label for = "fx">
         <h2>  Funkcja</h2>
@@ -51,11 +51,10 @@
     <p>funkcja= (-2x-3)(x^2+1) , punkt= -3</p>
     <p>funkcja= x^2-2x+1 , punkt= 3</p>
     <p>funkcja= (-3x+1)/(x-4) , punkt= 2</p>
-    <p id="rozw"></p>
+    <p id="solution"></p>
     <a href="index.html">Powrót</a>
     <div id="stopka">
         <h2>Autorzy:</h2>
         <h3>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</h3>
-        <button onclick=displayCart()>Koszyk</button>
+
     </div>
-    <div id="koszyk"></div>

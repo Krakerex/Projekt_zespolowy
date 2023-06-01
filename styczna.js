@@ -38,7 +38,7 @@ function tangentLine(funcf, funcg, point) {
   function styczna2(funcf,funcg,point){
     const f = math.parse(funcf); // parsowanie wyrażenia funkcji
     const df = math.derivative(f, 'x').toString(); // wyznaczanie pochodnej i parsowanie do stringa
-    document.getElementById("rozw").innerHTML="Pochodna: "+df+"<br>";
+    document.getElementById("solution").innerHTML="Pochodna: "+df+"<br>";
     const xpoint = math.evaluate(funcg, {x:point})
     const fPoint = math.evaluate(funcf, { x: xpoint }); // obliczanie wartości funkcji w punkcie
     const dfPoint = math.evaluate(df, { x: xpoint }); // obliczanie wartości pochodnej w punkcie
@@ -63,7 +63,7 @@ function tangentLine(funcf, funcg, point) {
      + "$"+f0+"="+equation2+"$<br>"
      + "$b="+b+"$<br>"
      + "$y="+ x + "$";
-     document.getElementById("rozw").innerHTML=rozwiazanie
+     document.getElementById("solution").innerHTML=rozwiazanie
      addToCart(rozwiazanie);
     MathJax.typeset();
 }

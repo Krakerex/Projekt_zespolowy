@@ -9,7 +9,7 @@ function wypuklosc(wyrazenie){
   pochodna_drugiego_stopnia=drugaPochodna(wyrazenie)
   wartoscPunktu=wypukloscLicz(wyrazenie,pochodna_drugiego_stopnia,-zakres,zakres);
   punktyPrzegięcia=findInflectionPoints(pochodna_drugiego_stopnia,-zakres,zakres,0.0001)
-  document.getElementById("rozw").innerHTML+="Punkty przegięcia: " +punktyPrzegięcia;
+  document.getElementById("solution").innerHTML+="Punkty przegięcia: " +punktyPrzegięcia;
   draw(zakres,wartoscPunktu,0.1)
 }
 function pochodna(wyrazenie){
@@ -19,10 +19,10 @@ function drugaPochodna(wyrazenie){
   return math.derivative(math.derivative(wyrazenie, 'x'), 'x');
 }
 function wypukloscLicz(wyrazenie,pochodna_drugiego_stopnia,a,b){
-    document.getElementById("rozw").innerHTML='';
+    document.getElementById("solution").innerHTML='';
     const wartoscPunktu=[];
     const wartoscY=[];
-    document.getElementById("rozw").innerHTML+=
+    document.getElementById("solution").innerHTML+=
     "$f''(x)= "+pochodna_drugiego_stopnia+"$<br>";
     MathJax.typeset();
     for(i=a;i<=b;i+=0.1){
@@ -34,7 +34,7 @@ function wypukloscLicz(wyrazenie,pochodna_drugiego_stopnia,a,b){
     }
 
     // wartoscPunktu.forEach((punkt, index) => {
-    //     document.getElementById("rozw").innerHTML += "x: "+   punkt[0] +" = "+punkt[1]+ "<br>"; 
+    //     document.getElementById("solution").innerHTML += "x: "+   punkt[0] +" = "+punkt[1]+ "<br>"; 
     // });
     const punktZmiany=[];
     var sign;

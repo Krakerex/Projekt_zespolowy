@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title> Rekurencja </title>
+        <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$']]
+              }
+            };
+        </script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+        <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="rekurencja.js"></script>
+    </head>
+
+
+    <body>
+        <h3>Przedstaw ciąg o wyrazie ogólnym w postaci rekurencyjnej:</h3>
+        <button id="1" onclick = przyklad1_rozw()>
+            $\ a_n = \frac{(n+1)!}{\pi^{2n}}$
+        </button>
+        <h3>Podaj własne wartości:  $\ a_n = \frac{(n+x)!}{\pi^{yn}}$</h3>
+        <form name = "wpisz1">
+            Podaj x:
+            <label>
+                <input id="x" value="1" type="number" min="1" max="9">
+            </label>
+            Podaj y:
+            <label>
+                <input id="y" value="2" type="number" min="1" max="9">
+            </label>
+        </form>
+        <button onclick = przyklad1_wlasny_rozw()>Oblicz</button>
+
+        <br><br>
+
+
+        <button id="1" onclick = przyklad2_rozw()>
+            $\ a_n = \frac{2^n}{(4n+3)!}$
+        </button>
+        <h3>Podaj własne wartości:   $\ a_n = \frac{x^n}{(yn+z)!}$</h3>
+        <form name = "wpisz2">
+            Podaj x:
+            <label>
+                <input id="x" value="4" type="number" min="1" max="9">
+            </label>
+            Podaj y:
+            <label>
+                <input id="y" value="3" type="number" min="1" max="9">
+            </label>
+            Podaj z:
+            <label>
+                <input id="z" value="2" type="number" min="0" max="9">
+            </label>
+        </form>
+        <button onclick = przyklad2_wlasny_rozw()>Oblicz</button>
+
+        <br><br>
+
+        <button id="3" onclick="przyklad3_rozw()">
+            $\ a_n = \frac{e^n}{5\cdot(n!)}!$
+        </button>
+        <h3>Podaj własne wartości:   $\  a_n = \frac{e^n}{x\cdot(n!)}!$</h3>
+        <form name="wpisz3">
+            Podaj x:
+            <label>
+                <input id="x" value="3" type="number" min="1" max="9">
+            </label>
+        </form>
+        <button onclick="przyklad3_wlasny_rozw()">Oblicz</button>
+
+
+<hr>
+        <p id="przyk"></p>
+
+        <p id="rozw"></p>
+
+        <div id="stopka">
+            <p>Autorzy:</p>
+            <p>Szymon Figger, Krzysztof Blicharz, Daniel Drapiewski, Marta Pypczyńska</p>
+        </div>
+    </body>
+</html>

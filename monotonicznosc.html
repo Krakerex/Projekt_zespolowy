@@ -15,25 +15,37 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
         <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
         <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="monotonicznosc.js"></script>
-        <script src="../CART.js"></script>
+        <script type="text/javascript" src="monotonicznosc3.js"></script>
     </head>
+
+
     <body>
-        <button id="send-but" onclick="sendToCart()">DODAJ</button>
-        <h3 id="task">Zbadaj monotoniczność ciągu o wyrazie ogólnym:</h3>
-        <button onclick = isMonotonic(przyklad1)>
-            $\ a_n = \frac{3^n}{(n+3)!}$
+        <h3>Zbadaj monotoniczność ciągu o wyrazie ogólnym:</h3>
+
+        <button onclick = przyklad2_rozw()>
+            $\ a_n = \frac{5^n}{(2n+8)!}$
         </button>
-        <br><br>
-        <button onclick = isMonotonic(przyklad2)>
-            $\ c_n = \frac{3n+1}{n+3}$
-        </button>
-        <br><br>
-        <button onclick = isMonotonic(przyklad3)>
-            $\ a_n = \frac{3^n}{(3n)!}$
-        </button>
-        
-        <p id="solution"></p>
+        <h3>Podaj własne wartości: $\ a_n = \frac{x^n}{(yn+z)!}$</h3>
+        <form name = "wpisz2">
+            Podaj x:
+            <label>
+                <input id="x" value="6" type="number" min="-9" max="9" >
+            </label>
+            Podaj y:
+            <label>
+                <input id="y" value="2" type="number" min="1" max="9">
+            </label>
+            Podaj z:
+            <label>
+                <input id="z" value="9" type="number" min="-9" max="9">
+            </label>
+        </form>
+        <button onclick = przyklad_0()>Oblicz</button>
+
+<hr>
+        <p id="przyk"></p>
+
+        <p id="rozw"></p>
 
         <div id="stopka">
             <p>Autorzy:</p>

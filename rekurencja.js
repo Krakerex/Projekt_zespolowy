@@ -1,15 +1,15 @@
 
 //PRZYKŁAD 1 
 function przyklad1_rozw(){
-    document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{(n+1)!}{\\pi^{2n}}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_0 = \\frac{(1)!}{\\pi^{0}} = 1$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_1 = \\frac{(2)!}{\\pi^{2}}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_2 = \\frac{(3)!}{\\pi^{4}}$ <br><br>` ;
+    document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{(n+1)!}{\\pi^{2n}}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_0 = \\frac{(1)!}{\\pi^{0}} = 1$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_1 = \\frac{(2)!}{\\pi^{2}}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_2 = \\frac{(3)!}{\\pi^{4}}$ <br><br>` ;
 
-    document.getElementById("przyk").innerHTML += ` $\ a_{n-1} = \\frac{(n+1-1)!}{\\pi^{2(n-1)}} = \\frac{n!}{\\pi^{2n-2}}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_{n-1} = \\frac{(n+1-1)!}{\\pi^{2(n-1)}} = \\frac{n!}{\\pi^{2n-2}}$ <br><br>` ;
 
-    document.getElementById("przyk").innerHTML += ` $\ a_n = \\frac{(n+1)!}{\\pi^{2n}} = \\frac{(n+1)n!}{\\pi^{2n-2}\\cdot\\pi^2}$` ;
-    document.getElementById("przyk").innerHTML += ` $\ = a_{n-1} \\cdot \\frac{n+1}{\\pi^2}$<br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_n = \\frac{(n+1)!}{\\pi^{2n}} = \\frac{(n+1)n!}{\\pi^{2n-2}\\cdot\\pi^2}$` ;
+    document.getElementById("solution").innerHTML += ` $\ = a_{n-1} \\cdot \\frac{n+1}{\\pi^2}$<br><br>` ;
 
     MathJax.typeset();
 
@@ -19,28 +19,28 @@ function przyklad1_rozw(){
     const x = parseFloat(document.wpisz1.x.value);
     const y = parseFloat(document.wpisz1.y.value);
   
-    document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{(n+`+x+`)!}{\\pi^{`+y+`n}}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_0 = \\frac{`+(x+0)+`!}{\\pi^{`+(y*0)+`}} = 1$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_1 = \\frac{`+(x+1)+`!}{\\pi^{`+(y*1)+`}}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_2 = \\frac{`+(x+2)+`!}{\\pi^{`+(y*2)+`}}$ <br><br>` ;
+    document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{(n+`+x+`)!}{\\pi^{`+y+`n}}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_0 = \\frac{`+(x+0)+`!}{\\pi^{`+(y*0)+`}} = 1$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_1 = \\frac{`+(x+1)+`!}{\\pi^{`+(y*1)+`}}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_2 = \\frac{`+(x+2)+`!}{\\pi^{`+(y*2)+`}}$ <br><br>` ;
 
-    document.getElementById("przyk").innerHTML += ` $\ a_{n-1} = \\frac{(n+`+(x)+`-1)!}{\\pi^{`+(y)+`(n-1)}} = \\frac{(n+`+(x-1)+`)!}{\\pi^{`+(y)+`n-`+(y)+`}}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_{n-1} = \\frac{(n+`+(x)+`-1)!}{\\pi^{`+(y)+`(n-1)}} = \\frac{(n+`+(x-1)+`)!}{\\pi^{`+(y)+`n-`+(y)+`}}$ <br><br>` ;
 
-    document.getElementById("przyk").innerHTML += ` $\ a_n = \\frac{(n+`+x+`)!}{\\pi^{`+y+`n}} = \\frac{(n+`+x+`)(n+`+(x-1)+`)!}{\\pi^{`+y+`n-`+y+`}\\cdot\\pi^`+y+`}$` ;
-    document.getElementById("przyk").innerHTML += ` $\ = a_{n-1} \\cdot \\frac{n+`+x+`}{\\pi^`+y+`}$<br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_n = \\frac{(n+`+x+`)!}{\\pi^{`+y+`n}} = \\frac{(n+`+x+`)(n+`+(x-1)+`)!}{\\pi^{`+y+`n-`+y+`}\\cdot\\pi^`+y+`}$` ;
+    document.getElementById("solution").innerHTML += ` $\ = a_{n-1} \\cdot \\frac{n+`+x+`}{\\pi^`+y+`}$<br><br>` ;
 
     MathJax.typeset();
   }
 //PRZYKŁAD 2
   function przyklad2_rozw(){
-    document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{2^n}{(4n+3)!}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_0 = \\frac{2^0}{(4\\cdot0 + 3)!}= \\frac{1}{6}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_1 = \\frac{2^1}{(4\\cdot1 + 3)!}= \\frac{1}{2520}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_2 = \\frac{2^2}{(4\\cdot2 + 3)!}= \\frac{1}{9979200}$ <br><br>` ;
+    document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{2^n}{(4n+3)!}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_0 = \\frac{2^0}{(4\\cdot0 + 3)!}= \\frac{1}{6}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_1 = \\frac{2^1}{(4\\cdot1 + 3)!}= \\frac{1}{2520}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_2 = \\frac{2^2}{(4\\cdot2 + 3)!}= \\frac{1}{9979200}$ <br><br>` ;
 
-    document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{2^{n+1}}{(4(n+1)+3)!} = \\frac{2^{n+1}}{(4n+7)!} $` ;
-    document.getElementById("przyk").innerHTML += ` $\ = \\frac{2^n}{(4n+3)!} \\cdot \\frac{2}{(4n+7)(4n+6)(4n+5)(4n+4)}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = a_n \\cdot \\frac{2}{(4n+7)(4n+6)(4n+5)(4n+4)}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{2^{n+1}}{(4(n+1)+3)!} = \\frac{2^{n+1}}{(4n+7)!} $` ;
+    document.getElementById("solution").innerHTML += ` $\ = \\frac{2^n}{(4n+3)!} \\cdot \\frac{2}{(4n+7)(4n+6)(4n+5)(4n+4)}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_{n+1} = a_n \\cdot \\frac{2}{(4n+7)(4n+6)(4n+5)(4n+4)}$ <br><br>` ;
     MathJax.typeset();
 
   }
@@ -82,28 +82,28 @@ if(z===0){
     
       
 
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n`+zplus+``+z+`)!}$ <br><br>` ;
-      document.getElementById("przyk").innerHTML += ` $\ a_0 = \\frac{`+x+`^0}{(`+y+``+dot+`0 `+zplus+` `+z+`)!}= \\frac{1}{`+factorial(py*0+pz)+`}$ <br><br>` ;
-      document.getElementById("przyk").innerHTML += ` $\ a_1 = \\frac{`+x+`^1}{(`+y+``+dot+`1 `+zplus+` `+z+`)!}= \\frac{`+x*x+`}{`+factorial(py*1+pz)+`}$ <br><br>` ;
-      document.getElementById("przyk").innerHTML += ` $\ a_2 = \\frac{`+x+`^2}{(`+y+``+dot+`2 `+zplus+` `+z+`)!}= \\frac{`+x*x*x+`}{`+factorial(py*2+pz)+`}$ <br><br>` ;
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n`+zplus+``+z+`)!}$ <br><br>` ;
+      document.getElementById("solution").innerHTML += ` $\ a_0 = \\frac{`+x+`^0}{(`+y+``+dot+`0 `+zplus+` `+z+`)!}= \\frac{1}{`+factorial(py*0+pz)+`}$ <br><br>` ;
+      document.getElementById("solution").innerHTML += ` $\ a_1 = \\frac{`+x+`^1}{(`+y+``+dot+`1 `+zplus+` `+z+`)!}= \\frac{`+x*x+`}{`+factorial(py*1+pz)+`}$ <br><br>` ;
+      document.getElementById("solution").innerHTML += ` $\ a_2 = \\frac{`+x+`^2}{(`+y+``+dot+`2 `+zplus+` `+z+`)!}= \\frac{`+x*x*x+`}{`+factorial(py*2+pz)+`}$ <br><br>` ;
   
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1)`+zplus+``+z+`)!} = \\frac{`+x+`^{n+1}}{(`+y+`n+`+(zplusy)+`)!} $` ;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^n}{(`+y+`n`+zplus+``+z+`)!} \\cdot \\frac{`+x+`}{`+slimak+`}$ <br><br>` ;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = a_n \\cdot \\frac{`+x+`}{`+slimak+`}$ <br><br>` ;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1)`+zplus+``+z+`)!} = \\frac{`+x+`^{n+1}}{(`+y+`n+`+(zplusy)+`)!} $` ;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^n}{(`+y+`n`+zplus+``+z+`)!} \\cdot \\frac{`+x+`}{`+slimak+`}$ <br><br>` ;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = a_n \\cdot \\frac{`+x+`}{`+slimak+`}$ <br><br>` ;
       MathJax.typeset();
 
     }
 
     //PRZYKŁAD 3
   function przyklad3_rozw(){
-    document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{e^n}{5(n!)}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_0 = \\frac{e^0}{5\\cdot(0!)}= \\frac{1}{5}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_1 = \\frac{e^1}{5\\cdot(1!)}= \\frac{e}{5}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_2 = \\frac{e^2}{5\\cdot(2!)}= \\frac{e^2}{10}$ <br><br>` ;
+    document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{e^n}{5(n!)}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_0 = \\frac{e^0}{5\\cdot(0!)}= \\frac{1}{5}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_1 = \\frac{e^1}{5\\cdot(1!)}= \\frac{e}{5}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_2 = \\frac{e^2}{5\\cdot(2!)}= \\frac{e^2}{10}$ <br><br>` ;
 
-    document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{e^{n+1}}{5((n+1)!)} = \\frac{e^{n}\\cdot e}{5(n!)(n+1)} $` ;
-    document.getElementById("przyk").innerHTML += ` $\ = \\frac{e^n}{5(n!)} \\cdot \\frac{e}{n+1}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = a_n \\cdot \\frac{e}{n+1}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{e^{n+1}}{5((n+1)!)} = \\frac{e^{n}\\cdot e}{5(n!)(n+1)} $` ;
+    document.getElementById("solution").innerHTML += ` $\ = \\frac{e^n}{5(n!)} \\cdot \\frac{e}{n+1}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_{n+1} = a_n \\cdot \\frac{e}{n+1}$ <br><br>` ;
     MathJax.typeset();
 
   }
@@ -120,14 +120,14 @@ if(z===0){
       dot = ""
     }
     
-    document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{e^n}{`+x+``+dot+`(n!)}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_0 = \\frac{e^0}{`+x+``+dot+`(0!)}= \\frac{1}{`+(factorial(0))*px+`}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_1 = \\frac{e^1}{`+x+``+dot+`(1!)}= \\frac{e}{`+(factorial(1))*px+`}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_2 = \\frac{e^2}{`+x+``+dot+`(2!)}= \\frac{e^2}{`+(factorial(2))*px+`}$ <br><br>` ;
+    document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{e^n}{`+x+``+dot+`(n!)}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_0 = \\frac{e^0}{`+x+``+dot+`(0!)}= \\frac{1}{`+(factorial(0))*px+`}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_1 = \\frac{e^1}{`+x+``+dot+`(1!)}= \\frac{e}{`+(factorial(1))*px+`}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_2 = \\frac{e^2}{`+x+``+dot+`(2!)}= \\frac{e^2}{`+(factorial(2))*px+`}$ <br><br>` ;
 
-    document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{e^{n+1}}{`+x+`((n+1)!)} = \\frac{e^{n}\\cdot e}{`+x+`(n!)(n+1)} $` ;
-    document.getElementById("przyk").innerHTML += ` $\ = \\frac{e^n}{`+x+`(n!)} \\cdot \\frac{e}{n+1}$ <br><br>` ;
-    document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = a_n \\cdot \\frac{e}{n+1}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{e^{n+1}}{`+x+`((n+1)!)} = \\frac{e^{n}\\cdot e}{`+x+`(n!)(n+1)} $` ;
+    document.getElementById("solution").innerHTML += ` $\ = \\frac{e^n}{`+x+`(n!)} \\cdot \\frac{e}{n+1}$ <br><br>` ;
+    document.getElementById("solution").innerHTML += ` $\ a_{n+1} = a_n \\cdot \\frac{e}{n+1}$ <br><br>` ;
     MathJax.typeset();
 
   }

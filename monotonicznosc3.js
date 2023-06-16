@@ -38,28 +38,28 @@ function przyklad_wlasny_1(x,y,z){
 
 
     if(x===1){
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{1^n}{n!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{1^{n+1}}{(n+1)!} = \\frac{1^{n+1}}{(n+1)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{1^{n+1}}{(n+1)!} \\cdot \\frac{n!}{1^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{1^{n}\\cdot 1}{(n+1)!} \\cdot \\frac{n!}{1^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{n!}{(n+1)\\cdot(n!)}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{1}{(n+1)}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{1}{(n+1)} < 1 $ <br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{1^n}{n!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{1^{n+1}}{(n+1)!} = \\frac{1^{n+1}}{(n+1)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{1^{n+1}}{(n+1)!} \\cdot \\frac{n!}{1^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{1^{n}\\cdot 1}{(n+1)!} \\cdot \\frac{n!}{1^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{n!}{(n+1)\\cdot(n!)}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{1}{(n+1)}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{1}{(n+1)} < 1 $ <br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
     }else{
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{(-1)^n}{n!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{(-1)^{n+1}}{(n+1)!} = \\frac{(-1)^{n+1}}{(n+1)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{(-1)^{n+1}}{(n+1)!} \\cdot \\frac{n!}{(-1)^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{(-1)^{n}\\cdot (-1)}{(n+1)\\cdot(n!)} \\cdot \\frac{n!}{(-1)^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{(-1)}{(n+1)}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{(-1)}{(n+1)} < 1 $ <br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{(-1)^n}{n!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{(-1)^{n+1}}{(n+1)!} = \\frac{(-1)^{n+1}}{(n+1)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{(-1)^{n+1}}{(n+1)!} \\cdot \\frac{n!}{(-1)^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{(-1)^{n}\\cdot (-1)}{(n+1)\\cdot(n!)} \\cdot \\frac{n!}{(-1)^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{(-1)}{(n+1)}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{(-1)}{(n+1)} < 1 $ <br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ; 
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ; 
     }
 }
 
@@ -92,27 +92,27 @@ function przyklad_wlasny_2(x,y,z){
     
     
       if(x===1){
-        document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{1^n}{(n`+znak+``+z+`)!} $ <br><br>`;
-        document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{1^{n+1}}{(n+1`+znak+``+z+`)!} = \\frac{1^{n+1}}{(n`+znakplus+``+zplus+`)!}$<br><br>`;
-        document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-        document.getElementById("przyk").innerHTML += ` $\ = \\frac{1^{n+1}}{(n`+znakplus+``+zplus+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{1^{n}}$`;
-        document.getElementById("przyk").innerHTML += ` $\ = \\frac{1^{n}\\cdot 1}{(n`+znakplus+``+zplus+`)\\cdot(n`+znak+``+z+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{1^{n}}$`;
-        document.getElementById("przyk").innerHTML += ` $\ = \\frac{1}{(n`+znak+``+zplus+`)!}$<br><br>`;
-        document.getElementById("przyk").innerHTML += ` $\ \\frac{1}{(n`+znak+``+zplus+`)!} < 1 $ <br>`
+        document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{1^n}{(n`+znak+``+z+`)!} $ <br><br>`;
+        document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{1^{n+1}}{(n+1`+znak+``+z+`)!} = \\frac{1^{n+1}}{(n`+znakplus+``+zplus+`)!}$<br><br>`;
+        document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+        document.getElementById("solution").innerHTML += ` $\ = \\frac{1^{n+1}}{(n`+znakplus+``+zplus+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{1^{n}}$`;
+        document.getElementById("solution").innerHTML += ` $\ = \\frac{1^{n}\\cdot 1}{(n`+znakplus+``+zplus+`)\\cdot(n`+znak+``+z+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{1^{n}}$`;
+        document.getElementById("solution").innerHTML += ` $\ = \\frac{1}{(n`+znak+``+zplus+`)!}$<br><br>`;
+        document.getElementById("solution").innerHTML += ` $\ \\frac{1}{(n`+znak+``+zplus+`)!} < 1 $ <br>`
         MathJax.typeset();
       
-        document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+        document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
       }else{
-        document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{(-1)^n}{(n`+znak+``+z+`)!} $ <br><br>`;
-        document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{(-1)^{n+1}}{(n+1`+znak+``+z+`)!} = \\frac{(-1)^{n+1}}{(n`+znakplus+``+zplus+`)!}$<br><br>`;
-        document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-        document.getElementById("przyk").innerHTML += ` $\ = \\frac{(-1)^{n+1}}{(n`+znakplus+``+zplus+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{(-1)^{n}}$`;
-        document.getElementById("przyk").innerHTML += ` $\ = \\frac{(-1)^{n}\\cdot (-1)}{(n`+znakplus+``+zplus+`)\\cdot(n`+znak+``+z+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{(-1)^{n}}$`;
-        document.getElementById("przyk").innerHTML += ` $\ = \\frac{-1}{(n`+znakplus+``+zplus+`)}$<br><br>`;
-        document.getElementById("przyk").innerHTML += ` $\ \\frac{-1}{(n`+znakplus+``+zplus+`)} < 1 $ <br>`
+        document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{(-1)^n}{(n`+znak+``+z+`)!} $ <br><br>`;
+        document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{(-1)^{n+1}}{(n+1`+znak+``+z+`)!} = \\frac{(-1)^{n+1}}{(n`+znakplus+``+zplus+`)!}$<br><br>`;
+        document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+        document.getElementById("solution").innerHTML += ` $\ = \\frac{(-1)^{n+1}}{(n`+znakplus+``+zplus+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{(-1)^{n}}$`;
+        document.getElementById("solution").innerHTML += ` $\ = \\frac{(-1)^{n}\\cdot (-1)}{(n`+znakplus+``+zplus+`)\\cdot(n`+znak+``+z+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{(-1)^{n}}$`;
+        document.getElementById("solution").innerHTML += ` $\ = \\frac{-1}{(n`+znakplus+``+zplus+`)}$<br><br>`;
+        document.getElementById("solution").innerHTML += ` $\ \\frac{-1}{(n`+znakplus+``+zplus+`)} < 1 $ <br>`
         MathJax.typeset();
       
-        document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ; 
+        document.getElementById("solution").innerHTML += "Ciąg jest malejący" ; 
       }
 }
 
@@ -134,25 +134,25 @@ function przyklad_wlasny_3(x,y,z){
     
     
     if(x===1){
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1))!} = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!} \\cdot \\frac{(`+y+`n)!}{`+x+`^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{(`+y+`n+`+y+`)!} \\cdot \\frac{(`+y+`n)!}{`+x+`^n} = \\frac{1}{`+slimak+`}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{1}{`+slimak+`} < 1$<br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1))!} = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!} \\cdot \\frac{(`+y+`n)!}{`+x+`^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{(`+y+`n+`+y+`)!} \\cdot \\frac{(`+y+`n)!}{`+x+`^n} = \\frac{1}{`+slimak+`}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{1}{`+slimak+`} < 1$<br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
     }else{
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1))!} = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!} \\cdot \\frac{(`+y+`n)!}{`+x+`^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{-(1)!}{`+slimak+`}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{-(1)!}{`+slimak+`} < 1$<br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1))!} = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!} \\cdot \\frac{(`+y+`n)!}{`+x+`^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{-(1)!}{`+slimak+`}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{-(1)!}{`+slimak+`} < 1$<br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
     }
 }
 
@@ -201,25 +201,25 @@ function przyklad_wlasny_4(x,y,z){
       }
     
     if(x===1){
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n`+znak+``+z+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1)`+znak+``+z+`)!} = \\frac{`+x+`^{n+1}}{(`+y+`n`+znakplus+``+(zplus)+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`\\cdot n`+znakplus+``+(zplus)+`)!} \\cdot \\frac{(`+y+`\\cdot n`+znak+``+z+`)!}{`+x+`^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{1}{`+slimak+`}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{1}{`+slimak+`} < 1$<br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n`+znak+``+z+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1)`+znak+``+z+`)!} = \\frac{`+x+`^{n+1}}{(`+y+`n`+znakplus+``+(zplus)+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`\\cdot n`+znakplus+``+(zplus)+`)!} \\cdot \\frac{(`+y+`\\cdot n`+znak+``+z+`)!}{`+x+`^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{1}{`+slimak+`}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{1}{`+slimak+`} < 1$<br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
     }else{
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n`+znak+``+z+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1)`+znak+``+z+`)!} = \\frac{`+x+`^{n+1}}{(`+y+`n`+znakplus+``+(zplus)+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`\\cdot n`+znakplus+``+(zplus)+`)!} \\cdot \\frac{(`+y+`\\cdot n`+znak+``+z+`)!}{`+x+`^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{-1}{`+slimak+`}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{-1}{`+slimak+`} < 1$<br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n`+znak+``+z+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1)`+znak+``+z+`)!} = \\frac{`+x+`^{n+1}}{(`+y+`n`+znakplus+``+(zplus)+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`\\cdot n`+znakplus+``+(zplus)+`)!} \\cdot \\frac{(`+y+`\\cdot n`+znak+``+z+`)!}{`+x+`^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{-1}{`+slimak+`}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{-1}{`+slimak+`} < 1$<br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
     }
 }
 
@@ -249,25 +249,25 @@ function przyklad_wlasny_5(x,y,z){
       }
     
     if(x>0){
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(n)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(n+1)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(n+1)!} \\cdot \\frac{(n)!}{`+x+`^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{n+1} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{n+1}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{`+x+`}{n+1} < 1$<br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(n)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(n+1)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(n+1)!} \\cdot \\frac{(n)!}{`+x+`^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{n+1} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{n+1}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{`+x+`}{n+1} < 1$<br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
     }else{
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(n)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(n+1)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(n+1)!} \\cdot \\frac{(n)!}{`+x+`^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{n+1} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{n+1}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{`+x+`}{n+1} < 1$<br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(n)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(n+1)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(n+1)!} \\cdot \\frac{(n)!}{`+x+`^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{n+1} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{n+1}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{`+x+`}{n+1} < 1$<br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
     }
 }
 
@@ -297,15 +297,15 @@ function przyklad_wlasny_6(x,y,z){
 
     
     
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(n`+znak+``+z+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{((n+1)`+znak+``+z+`)!} = \\frac{`+x+`^{n+1}}{(n`+znakplus+``+(zplus)+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(n`+znakplus+``+(zplus)+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{`+x+`^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{n`+znakplus+``+(zplus)+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{n`+znakplus+``+(zplus)+`}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{`+x+`}{n`+znakplus+``+(zplus)+`} < 1$<br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(n`+znak+``+z+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{((n+1)`+znak+``+z+`)!} = \\frac{`+x+`^{n+1}}{(n`+znakplus+``+(zplus)+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(n`+znakplus+``+(zplus)+`)!} \\cdot \\frac{(n`+znak+``+z+`)!}{`+x+`^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{n`+znakplus+``+(zplus)+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{n`+znakplus+``+(zplus)+`}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{`+x+`}{n`+znakplus+``+(zplus)+`} < 1$<br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
 }
 
 //x=/=1, y=/=1, z=0-----------------------------------------------------------------------
@@ -354,15 +354,15 @@ function przyklad_wlasny_7(x,y,z){
   }
 
 
-  document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n)!}$<br><br>`;
-  document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1))!} = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!}$<br><br>`;
-  document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-  document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`\\cdot n+`+y+`)!} \\cdot \\frac{(`+y+`\\cdot n)!}{`+x+`^n}$`;
-  document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{`+slimak+`}$<br><br>`;
-  document.getElementById("przyk").innerHTML += ` $\ \\frac{`+x+`}{`+slimak+`} < 1$<br>`
+  document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n)!}$<br><br>`;
+  document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1))!} = \\frac{`+x+`^{n+1}}{(`+y+`n+`+y+`)!}$<br><br>`;
+  document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+  document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`\\cdot n+`+y+`)!} \\cdot \\frac{(`+y+`\\cdot n)!}{`+x+`^n}$`;
+  document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{`+slimak+`}$<br><br>`;
+  document.getElementById("solution").innerHTML += ` $\ \\frac{`+x+`}{`+slimak+`} < 1$<br>`
   MathJax.typeset();
 
-  document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+  document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
 }
 
 //x=/=1, y=/=1, z=/=0-----------------------------------------------------------------------
@@ -413,13 +413,13 @@ function przyklad_wlasny_8(x,y,z){
     }
     
     
-      document.getElementById("przyk").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n`+znak+``+z+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1)`+znak+``+z+`)!} = \\frac{`+x+`^{n+1}}{(`+y+`n`+znakplus+``+(zplus)+`)!}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`\\cdot n`+znakplus+``+(zplus)+`)!} \\cdot \\frac{(`+y+`\\cdot n`+znak+``+z+`)!}{`+x+`^n}$`;
-      document.getElementById("przyk").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{`+slimak+`}$<br><br>`;
-      document.getElementById("przyk").innerHTML += ` $\ \\frac{`+x+`}{`+slimak+`} < 1$<br>`
+      document.getElementById("solution").innerHTML = ` $\ a_n = \\frac{`+x+`^n}{(`+y+`n`+znak+``+z+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ a_{n+1} = \\frac{`+x+`^{n+1}}{(`+y+`(n+1)`+znak+``+z+`)!} = \\frac{`+x+`^{n+1}}{(`+y+`n`+znakplus+``+(zplus)+`)!}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{a_{n+1}}{a_n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n+1}}{(`+y+`\\cdot n`+znakplus+``+(zplus)+`)!} \\cdot \\frac{(`+y+`\\cdot n`+znak+``+z+`)!}{`+x+`^n}$`;
+      document.getElementById("solution").innerHTML += ` $\ = \\frac{`+x+`^{n}\\cdot`+x+`}{`+slimak+`} \\cdot \\frac{1}{`+x+`^n} = \\frac{`+x+`}{`+slimak+`}$<br><br>`;
+      document.getElementById("solution").innerHTML += ` $\ \\frac{`+x+`}{`+slimak+`} < 1$<br>`
       MathJax.typeset();
     
-      document.getElementById("rozw").innerHTML = "Ciąg jest malejący" ;
+      document.getElementById("solution").innerHTML += "Ciąg jest malejący" ;
 }

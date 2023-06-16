@@ -16,11 +16,13 @@
         <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="monotonicznosc3.js"></script>
+        <script src="../CART.js"></script>
     </head>
 
 
     <body>
-        <h3>Zbadaj monotoniczność ciągu o wyrazie ogólnym:</h3>
+        <button id="send-but" onclick="sendToCart()">DODAJ</button>
+        <h2 id="task">Zbadaj monotoniczność ciągu o wyrazie ogólnym:</h2>
 
         <button onclick = przyklad2_rozw()>
             $\ a_n = \frac{5^n}{(2n+8)!}$
@@ -45,7 +47,7 @@
 <hr>
         <p id="przyk"></p>
 
-        <p id="rozw"></p>
+        <p id="solution"></p>
 
         <div id="stopka">
             <p>Autorzy:</p>
